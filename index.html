@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZYRICK — Custom Web Design & Development</title>
+<meta name="description" content="ZYRICK creates stunning, high-performance websites that drive results. Strategic design with clean code—built for businesses ready to grow.">
+<link rel="icon" type="image/png" href="zyrick-avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#0a0a0a;
+    --dark-secondary:#1a1a1a;
+    --dark-tertiary:#242424;
+    --light:#ffffff;
+    --light-secondary:#f8f8f8;
+    --light-tertiary:#efefef;
+    --text-primary:#f5f5f5;
+    --text-secondary:#b0b0b0;
+    --text-light:#808080;
+    --border:#333333;
+    --accent:#3b82f6;
+    --accent-hover:#2563eb;
+    --success:#059669;
+    --radius:12px;
+    --nav-h:64px;
+    --gutter:clamp(24px,6vw,80px);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{ scroll-behavior:smooth; overflow-x:hidden; width:100%; }
+
+  ::selection{ background:var(--ink); color:var(--paper); }
+
+  ::-webkit-scrollbar{ width:9px; }
+  ::-webkit-scrollbar-track{ background:var(--paper); }
+  ::-webkit-scrollbar-thumb{ background:var(--line); border-radius:10px; }
+  ::-webkit-scrollbar-thumb:hover{ background:rgba(255,255,255,0.3); }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ transition:none !important; animation:none !important; scroll-behavior:auto !important; }
+    .reveal{ opacity:1 !important; transform:none !important; }
+  }
+
+  body{
+    background:var(--dark);
+    color:var(--text-primary);
+    font-family:'Plus Jakarta Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    line-height:1.2;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{max-width:1280px;margin:0 auto;padding:0 var(--gutter);}
+  .bleed{width:100%;}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 28px;border-radius:8px;
+    font-size:14px;font-weight:600;
+    transition:all .25s ease;
+    white-space:nowrap;
+    position:relative;
+    cursor:pointer;
+    border:none;
+  }
+  .btn-primary{ background:var(--accent);color:white; }
+  .btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 12px 28px rgba(59,130,246,0.35);}
+  .btn-ghost{ border:1.5px solid var(--border); color:var(--text-secondary); background:transparent; }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:rgba(59,130,246,0.1);transform:translateY(-2px);}
+  .btn-on-light{ background:var(--text-primary); color:white; }
+  .btn-on-light:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,0.15); }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.is-in{ opacity:1; transform:translateY(0); }
+
+  /* ---------- NAV ---------- */
+  nav{
+    height:var(--nav-h);
+    display:flex;align-items:center;justify-content:space-between;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 var(--gutter);
+    width:100%;
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,10,0.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .brand{ display:flex; align-items:center; gap:9px; }
+  .brand:hover .brand-photo{ transform:scale(1.08); border-color:var(--accent); }
+  .brand-mark{
+    width:36px;height:36px;border-radius:8px;
+    background:var(--accent);color:white;
+    display:inline-flex;align-items:center;justify-content:center;
+    font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:16px;
+    flex:none;
+  }
+  .brand-photo{
+    width:34px;height:34px;border-radius:50%;
+    object-fit:cover;
+    object-position:center 30%;
+    border:1.5px solid var(--line-strong);
+    filter:brightness(1.22) contrast(1.06);
+    flex:none;
+    transition:transform .3s ease, border-color .3s ease;
+  }
+  .brand-mark.on-light{ background:var(--mock-ink); color:var(--mock); }
+  .brand-name{ font-weight:700;font-size:14px;letter-spacing:0.05em;text-transform:uppercase;color:var(--light); }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding-top:12vh; padding-bottom:10vh;
+    display:flex;
+    flex-wrap:wrap;
+    gap:clamp(40px,6vw,90px);
+    align-items:flex-start;
+  }
+  .hero-copy{ flex:1 1 380px; min-width:0; }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;color:var(--accent);font-weight:600;
+    border:1.5px solid var(--accent);
+    padding:8px 16px;border-radius:24px;
+    margin-bottom:28px;
+  }
+  .eyebrow::before{
+    content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 0 rgba(37,99,235,0.5);
+    animation:pulseDot 2s ease-out infinite;
+  }
+  @keyframes pulseDot{
+    0%{ box-shadow:0 0 0 0 rgba(37,99,235,0.5); }
+    70%{ box-shadow:0 0 0 8px rgba(37,99,235,0); }
+    100%{ box-shadow:0 0 0 0 rgba(37,99,235,0); }
+  }
+
+  .hero h1{
+    font-size:clamp(36px,5vw,52px);
+    font-weight:700;
+    max-width:28ch;
+    margin-bottom:24px;
+    color:var(--light);
+  }
+  .hero .sub{
+    font-size:16.5px;
+    color:var(--text-secondary);
+    max-width:50ch;
+    line-height:1.7;
+    margin-bottom:40px;
+  }
+  .hero .cta-row{ display:flex; flex-wrap:wrap; gap:12px; }
+
+  .hero-photo{
+    position:relative;
+    width:100%;
+    aspect-ratio:3.5/5;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    background:var(--dark-secondary);
+    box-shadow:0 20px 50px rgba(0,0,0,0.3);
+  }
+  .hero-photo-img{
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:center 22%;
+    filter:brightness(1) contrast(1.05);
+    transition:transform .5s ease, filter .4s ease;
+  }
+  .hero-photo:hover .hero-photo-img{ transform:scale(1.04); filter:brightness(1.05) contrast(1.08); }
+  .hero-photo::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(5,5,5,0.82) 0%, rgba(5,5,5,0.15) 42%, transparent 62%);
+    pointer-events:none;
+  }
+  .hero-photo-caption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:20px 22px;
+    display:flex; flex-direction:column; gap:2px;
+    z-index:1;
+  }
+  .hero-photo-caption .hm-name{ font-size:17px;font-weight:700;color:var(--ink); font-family:'Oswald',sans-serif; }
+  .hero-photo-caption .hm-role{ font-size:11.5px;color:var(--ink-soft); letter-spacing:.02em; }
+
+  .hero-meta{
+    display:flex; flex-direction:column;
+    gap:16px;
+    flex:0 1 300px;
+    min-width:240px;
+    max-width:340px;
+  }
+  .hero-meta-row{
+    padding:20px 0 0;
+    border-top:1px solid var(--border);
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .hero-meta-row .hm-label{ font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light); }
+  .hero-meta-row .hm-value{ font-size:16px;font-weight:600;color:var(--text-primary); }
+
+  @media (max-width:860px){
+    .hero-meta{ flex:1 1 100%; max-width:420px; min-width:0; }
+    .hero-photo{ aspect-ratio:16/10; }
+    .hero h1 br{ display:none; }
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-label{
+    font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:16px;
+  }
+  .sec-head{ margin-bottom:0; max-width:100%; }
+  .sec-head h2{ font-size:clamp(28px,3.5vw,38px); margin-bottom:14px;color:var(--light); }
+  .sec-head p{ font-size:15px; color:var(--text-secondary); line-height:1.7; }
+  .work-intro .sec-head{
+    padding-left:var(--gutter);
+    padding-right:var(--gutter);
+    box-sizing:border-box;
+  }
+
+  /* ---------- WORK (project cards with vertical stacking) ---------- */
+  .work-section{ border-top:1px solid var(--border); }
+  .work-intro{
+    padding-top:12vh;
+    padding-bottom:7vh;
+    padding-left:clamp(20px,2vw,32px);
+    padding-right:clamp(20px,2vw,32px);
+  }
+
+  .project-showcase{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+  }
+
+  .project-feature{
+    display:grid;
+    grid-template-columns:1.3fr 0.9fr;
+    gap:28px;
+    align-items:center;
+    padding:24px;
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:26px;
+    background:linear-gradient(180deg, rgba(20,20,20,0.9), rgba(12,12,12,0.95));
+    transition:transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+  }
+  .project-feature:nth-child(even){
+    grid-template-columns:0.9fr 1.3fr;
+  }
+  .project-feature:nth-child(even) .project-feature-media{ order:2; }
+  .project-feature:nth-child(even) .project-feature-body{ order:1; }
+
+  .project-feature:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,255,255,0.12);
+    box-shadow:0 26px 60px rgba(0,0,0,0.18);
+  }
+
+  .project-feature-media{
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    background:#111;
+    border:1px solid rgba(255,255,255,0.04);
+    aspect-ratio:16/11;
+  }
+  .project-feature-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+    filter:saturate(0.85) contrast(1.06);
+  }
+  .project-feature:hover .project-feature-media img{ transform:scale(1.03); }
+
+  .project-feature-body{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    padding:8px 4px;
+  }
+
+  .project-meta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding-bottom:12px;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+  }
+  .project-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .project-icon{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,0.06);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .project-icon img{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+  }
+  .project-tags{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+  .tag-pill{
+    display:inline-flex;
+    align-items:center;
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.02);
+    color:var(--text-secondary);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+  }
+  .tag-solid{
+    background:rgba(255,255,255,0.04);
+    border-color:rgba(255,255,255,0.1);
+    color:var(--text-primary);
+  }
+
+  .project-feature h3{
+    font-size:clamp(26px, 3vw, 42px);
+    line-height:1.02;
+    letter-spacing:-0.06em;
+    margin:0;
+    color:var(--light);
+    font-weight:700;
+  }
+  .project-feature p{
+    margin:0;
+    color:var(--text-secondary);
+    font-size:15px;
+    line-height:1.8;
+    max-width:58ch;
+  }
+
+  .project-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--text-primary);
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-top:4px;
+    transition:color .2s ease;
+  }
+  .project-link svg{
+    width:12px;
+    height:12px;
+    transition:transform .2s ease;
+  }
+  .project-feature:hover .project-link{ color:var(--accent); }
+  .project-feature:hover .project-link svg{ transform:translate(4px,-2px); }
+
+  @media (max-width:900px){
+    .project-feature,
+    .project-feature:nth-child(even){
+      grid-template-columns:1fr;
+    }
+    .project-feature:nth-child(even) .project-feature-media,
+    .project-feature:nth-child(even) .project-feature-body{
+      order:initial;
+    }
+  }
+
+  @media (max-width:768px){
+    .projects-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- ABOUT (inverted panel break) ---------- */
+  .about-panel{
+    background:var(--dark-secondary);
+    color:var(--text-primary);
+    padding:14vh 0;
+  }
+  .about-panel .sec-label{ color:var(--accent); }
+  .about-inner{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    gap:clamp(20px,5vw,56px);
+    align-items:center;
+  }
+  .about-num{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:clamp(68px,12vw,140px);
+    font-weight:700;
+    line-height:0.85;
+    color:var(--accent);
+  }
+  .about-statement{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:clamp(22px,2.8vw,32px);
+    font-weight:600;
+    line-height:1.35;
+    max-width:24ch;
+    color:var(--light);
+  }
+  .about-statement b{ font-weight:700; }
+  .about-sub{
+    margin-top:20px;
+    font-size:15px;
+    color:var(--text-secondary);
+    max-width:48ch;
+    line-height:1.7;
+    font-family:'Plus Jakarta Sans',sans-serif;
+  }
+  .about-photo-wrap{
+    width:clamp(180px,20vw,240px);
+    aspect-ratio:1;
+    border-radius:14px;
+    overflow:hidden;
+    border:2px solid var(--border);
+    flex:none;
+    justify-self:end;
+    transition:transform .35s ease, border-color .35s ease;
+    box-shadow:0 12px 30px rgba(0,0,0,0.4);
+  }
+  .about-photo-wrap img{
+    width:100%;height:100%;object-fit:cover;
+    filter:brightness(1) contrast(1.05);
+    transition:filter .4s ease, transform .4s ease;
+  }
+  .about-photo-wrap:hover{ transform:translateY(-4px); border-color:var(--accent); }
+  .about-photo-wrap:hover img{ filter:brightness(1.05) contrast(1.1); transform:scale(1.04); }
+  @media (max-width:700px){
+    .about-inner{ grid-template-columns:1fr; }
+    .about-photo-wrap{ justify-self:start; }
+  }
+
+  /* ---------- FINALE (CTA + contact + footer folded together) ---------- */
+  .finale{
+    position:relative;
+    background:var(--dark);
+    padding:14vh 0 0;
+  }
+  .finale::before{
+    content:'';
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 80% 80%, rgba(59,130,246,0.1), transparent 50%);
+    pointer-events:none;
+  }
+  .finale-inner{ position:relative; }
+
+  .finale-split{
+    display:grid;
+    grid-template-columns:1fr 0.92fr;
+    gap:clamp(32px,6vw,72px);
+    align-items:center;
+    margin-bottom:14vh;
+  }
+  .finale-copy{ max-width:36ch; }
+  .finale-head{ margin-bottom:14px; }
+  .finale-head h2{ font-size:clamp(32px,4.5vw,48px); max-width:14ch; color:var(--text-primary); }
+  .finale-head p{ font-size:15px;color:var(--text-secondary);line-height:1.7;max-width:36ch;margin:18px 0 0; }
+
+  .contact-options{ display:flex; flex-direction:column; gap:12px; }
+  @media (max-width:860px){
+    .finale-split{ grid-template-columns:1fr; margin-bottom:10vh; }
+    .finale-copy{ max-width:none; }
+    .finale-head p{ margin-bottom:8px; max-width:44ch; }
+  }
+  .contact-row{
+    position:relative; overflow:hidden;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;
+    padding:24px 28px;
+    border:1.5px solid var(--border);
+    border-radius:12px;
+    background:var(--dark-secondary);
+    transition:all .3s ease;
+  }
+  .contact-row:hover{
+    border-color:var(--accent);
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(59,130,246,0.25);
+  }
+  .contact-row .co-label{ font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:600; }
+  .contact-row .co-value{ font-size:16px;font-weight:600;color:var(--light);margin-top:4px; }
+  .contact-icon{
+    width:40px;height:40px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    border:1.5px solid var(--border);
+    flex:none;
+    transition:all .3s ease;
+  }
+  .contact-icon svg{ width:16px;height:16px;color:var(--text-secondary); transition:color .25s ease; }
+  .contact-row:hover .contact-icon{ background:var(--accent); border-color:var(--accent); }
+  .contact-row:hover .contact-icon svg{ color:white; }
+  .contact-options .contact-row:nth-child(1){ transition-delay:0s; }
+  .contact-options .contact-row.reveal:nth-child(2){ transition-delay:.08s; }
+  .contact-options .contact-row.reveal:nth-child(3){ transition-delay:.16s; }
+
+
+  /* footer folded into finale panel */
+  footer{ position:relative; border-top:1px solid var(--border); }
+  .footer-inner{
+    padding:32px var(--gutter) 40px;
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:20px;
+    max-width:1280px;margin:0 auto;
+  }
+  .footer-brand{ display:flex;align-items:center;gap:10px; }
+  .footer-brand .brand-photo{
+    width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center 30%;
+    border:1px solid rgba(255,255,255,0.12);background:#111;
+    flex:none;display:block;
+  }
+  .footer-copy{ font-size:12px;color:var(--text-light); }
+  .footer-links{ display:flex; gap:24px; }
+  .footer-links a{ font-size:13px;font-weight:600;color:var(--text-secondary);transition:color .25s ease; }
+  .footer-links a:hover{ color:var(--accent); }
+  .footer-brand span{ color:var(--light); }
+
+  @media (max-width:700px){
+    .footer-inner{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <img src="zyrick-avatar.png" alt="Zyrick" class="brand-photo">
+    <span class="brand-name">ZYRICK</span>
+  </div>
+  <a href="https://wa.me/2349031912660" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:12px 20px;font-size:13px;">Get in touch</a>
+</nav>
+
+<!-- 1. HERO -->
+<div class="wrap hero">
+  <div class="hero-copy">
+    <span class="eyebrow">2 spots open for this month</span>
+    <h1>Custom websites that engage and convert</h1>
+    <p class="sub">Strategic design meets clean code. I build high-performance websites that showcase your brand and drive measurable results for your business.</p>
+    <div class="cta-row">
+      <a href="https://wa.me/2349031912660" target="_blank" rel="noopener" class="btn btn-primary">Get started →</a>
+      <a href="https://calendly.com/zyrick/30min" target="_blank" rel="noopener" class="btn btn-ghost">Schedule a call</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-photo">
+      <img src="zyrick-avatar.png" alt="Zyrick" class="hero-photo-img">
+      <div class="hero-photo-caption">
+        <div class="hm-name">Zyrick</div>
+        <div class="hm-role">Designer &amp; developer</div>
+      </div>
+    </div>
+    <div class="hero-meta-row">
+      <span class="hm-label">Experience</span>
+      <span class="hm-value">5+ years</span>
+    </div>
+  </div>
+</div>
+
+<!-- 2. WORK — editorial alternating rows -->
+<section class="work-section" id="work">
+  <div class="wrap work-intro reveal">
+    <div class="sec-head">
+      <div class="sec-label">Featured Work</div>
+      <h2>Recent projects that drove results</h2>
+      <p>A selection of recent client work showcasing custom design and development.</p>
+    </div>
+  </div>
+
+  <div class="wrap reveal">
+    <div class="project-showcase">
+
+      <article class="project-feature reveal">
+        <div class="project-feature-media">
+          <img src="screenshots/3ub-express.jpg" alt="3Ub Express website preview">
+        </div>
+        <div class="project-feature-body">
+          <div class="project-meta">
+            <div class="project-brand">
+              <div class="project-icon">
+                <img src="icons/3ub-express.png" alt="3Ub Express">
+              </div>
+              <strong>3ubexpress</strong>
+            </div>
+            <div class="project-tags">
+              <span class="tag-pill">Automotive</span>
+              <span class="tag-pill tag-solid">Live</span>
+            </div>
+          </div>
+          <h3>Vehicle browsing that feels effortless.</h3>
+          <p>Redesigned vehicle dealership site to streamline the browsing experience and make direct contact effortless for customers seeking specific vehicles.</p>
+          <a href="https://3ubexpress.framer.website" target="_blank" rel="noopener" class="project-link">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project-feature reveal">
+        <div class="project-feature-media">
+          <img src="screenshots/landbooklet.jpg" alt="Landbooklet website preview">
+        </div>
+        <div class="project-feature-body">
+          <div class="project-meta">
+            <div class="project-brand">
+              <div class="project-icon">
+                <img src="icons/landbooklet.png" alt="Landbooklet">
+              </div>
+              <strong>Landbooklet</strong>
+            </div>
+            <div class="project-tags">
+              <span class="tag-pill">Real Estate</span>
+              <span class="tag-pill tag-solid">Live</span>
+            </div>
+          </div>
+          <h3>Property discovery designed to convert.</h3>
+          <p>Built a modern real estate platform featuring property listings prominently with intuitive navigation and direct agent contact options to convert browsers into leads.</p>
+          <a href="https://landbooklet.framer.website" target="_blank" rel="noopener" class="project-link">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project-feature reveal">
+        <div class="project-feature-media">
+          <img src="screenshots/braintree-company.jpg" alt="Braintree Company website preview">
+        </div>
+        <div class="project-feature-body">
+          <div class="project-meta">
+            <div class="project-brand">
+              <div class="project-icon">
+                <img src="icons/braintree-company.png" alt="Braintree Company">
+              </div>
+              <strong>Braintree Company</strong>
+            </div>
+            <div class="project-tags">
+              <span class="tag-pill">Education & Media</span>
+              <span class="tag-pill tag-solid">Live</span>
+            </div>
+          </div>
+          <h3>Clear storytelling for a mission-led brand.</h3>
+          <p>Designed and developed a clear, accessible website for an education organization that effectively communicates programs and impact while providing seamless contact pathways.</p>
+          <a href="https://braintreecompany.com/" target="_blank" rel="noopener" class="project-link">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project-feature reveal">
+        <div class="project-feature-media">
+          <img src="screenshots/karim-schools.jpg" alt="Karim Schools website preview">
+        </div>
+        <div class="project-feature-body">
+          <div class="project-meta">
+            <div class="project-brand">
+              <div class="project-icon">
+                <img src="icons/karim-schools.png" alt="Karim Schools">
+              </div>
+              <strong>Karim Schools</strong>
+            </div>
+            <div class="project-tags">
+              <span class="tag-pill">Education</span>
+              <span class="tag-pill tag-solid">Live</span>
+            </div>
+          </div>
+          <h3>Warm, trustworthy web presence for families.</h3>
+          <p>Created a welcoming website for a progressive educational institution that clearly communicates their teaching philosophy and facilitates enrollment inquiries from prospective parents.</p>
+          <a href="https://karimschool.framer.website" target="_blank" rel="noopener" class="project-link">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3. ABOUT — inverted panel break -->
+<section class="about-panel" id="about">
+  <div class="wrap reveal">
+    <div class="sec-label">About</div>
+    <div class="about-inner">
+      <span class="about-num">5+</span>
+      <div>
+        <p class="about-statement"><b>5+ years</b> of web design and development experience</p>
+        <p class="about-sub">I build websites by starting with what users need to understand and do. The design, messaging, and functionality all serve that clarity. Every project is built for performance, accessibility, and measurable impact.</p>
+      </div>
+      <div class="about-photo-wrap">
+        <img src="zyrick-avatar.png" alt="Zyrick">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. FINALE — CTA, contact and footer folded into one panel -->
+<section class="finale" id="contact">
+  <div class="wrap finale-inner reveal">
+    <div class="finale-split">
+      <div class="finale-copy">
+        <div class="sec-label">Contact</div>
+        <div class="finale-head">
+          <h2>Ready to build something great?</h2>
+          <p>Let's discuss your project. Reach out via WhatsApp for a quick conversation or book a call to explore your vision in detail.</p>
+        </div>
+      </div>
+      <div class="contact-options">
+        <a href="https://wa.me/2349031912660" target="_blank" rel="noopener" class="contact-row reveal">
+          <div><div class="co-label">WhatsApp</div><div class="co-value">Start a conversation</div></div>
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a href="https://calendly.com/zyrick/30min" target="_blank" rel="noopener" class="contact-row reveal">
+          <div><div class="co-label">Calendar</div><div class="co-value">Schedule a meeting</div></div>
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a href="mailto:justzyrick@gmail.com" class="contact-row reveal">
+          <div><div class="co-label">Email</div><div class="co-value">justzyrick@gmail.com</div></div>
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="zyrick-avatar.png" alt="Zyrick" class="brand-photo">
+        <span class="brand-name">ZYRICK</span>
+      </div>
+      <span class="footer-copy">© 2026 ZYRICK</span>
+      <div class="footer-links">
+        <a href="https://ig.me/m/zyrick_dev" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/2349031912660" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<script>
+  function handleShotError(img){
+    if (img.dataset.fallback){
+      var next = img.dataset.fallback;
+      delete img.dataset.fallback;
+      img.src = next;
+      return;
+    }
+    var media = img.closest('.index-media');
+    img.remove();
+    if (media) media.classList.add('shot-fallback');
+  }
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold:0.12 });
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-in'));
+  }
+</script>
+
+</body>
+</html>
