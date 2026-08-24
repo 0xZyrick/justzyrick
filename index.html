@@ -127,4 +127,26 @@ document.querySelectorAll('.work-arrow').forEach(function(arrow){arrow.addEventL
   suggestions.querySelectorAll('.chat-suggestion').forEach(function(button){button.addEventListener('click',function(){input.value=button.textContent;form.requestSubmit()})});
 })();
 </script>
+<style>.hero-cta{margin-top:8px}</style>
+<script>
+(function(){
+  var firstCategory=document.querySelector('.tab[data-filter="all"] strong');
+  if(firstCategory)firstCategory.textContent='Growing brands';
+
+  var heroCopy=document.querySelector('.hero > div:first-child');
+  if(heroCopy&&!heroCopy.querySelector('.hero-cta')){
+    var callLink=document.createElement('a');
+    callLink.className='button hero-cta';
+    callLink.href='https://calendly.com/zyrick/30min';
+    callLink.target='_blank';
+    callLink.rel='noreferrer';
+    callLink.textContent='Book a call ->';
+    heroCopy.querySelector('p').after(callLink);
+  }
+
+  document.querySelectorAll('.plan .choose').forEach(function(button){
+    button.onclick=function(){window.open('https://wa.me/2349031912660','_blank','noopener,noreferrer')};
+  });
+})();
+</script>
 </body></html>
