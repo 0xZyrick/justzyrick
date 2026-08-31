@@ -1,152 +1,323 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ZYRICK - Clear websites that get more enquiries</title>
-<meta name="description" content="Strategic websites for Nigerian businesses, schools, car dealers and property brands.">
-<link rel="icon" href="zyrick-avatar.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZYRICK — Websites that turn browsers into enquiries</title>
+<meta name="description" content="I build enquiry-first websites for property brands and car dealers — clear listings, clear stock, and a direct path from visitor to message.">
+<link rel="icon" href="zyrick-avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#17211d;--paper:#f5f3ed;--cream:#e9e6dc;--line:#c8c9bd;--muted:#69716b;--green:#1d5948;--coral:#d9674f;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.nav{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;font-size:13px}.brand img{width:30px;height:30px;border-radius:50%;object-fit:cover}.links{display:flex;align-items:center;gap:28px;font-size:13px}.links a:hover{color:var(--coral)}.nav-cta,.button{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);padding:10px 16px;font-weight:600;font-size:13px}.nav-cta{background:var(--ink);color:var(--paper)}.hero{padding:clamp(70px,12vw,150px) 0 110px;display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:end}.eyebrow{color:var(--coral);font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:700}.hero h1{font-size:clamp(48px,7vw,92px);line-height:.98;letter-spacing:-.06em;max-width:720px;margin:20px 0 28px}.serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}.hero p{max-width:440px;color:var(--muted);font-size:17px}.hero-note{border-top:1px solid var(--ink);padding-top:16px;color:var(--muted);font-size:13px}.hero-showcase{position:relative;width:100%;max-width:390px;aspect-ratio:16/10;overflow:hidden;border-radius:12px;background:var(--cream);margin:0 0 20px auto}.hero-showcase img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:heroCrossfade 28s ease-in-out infinite}.hero-showcase img:nth-child(1){animation-delay:0s}.hero-showcase img:nth-child(2){animation-delay:7s}.hero-showcase img:nth-child(3){animation-delay:14s}.hero-showcase img:nth-child(4){animation-delay:21s}@keyframes heroCrossfade{0%,100%{opacity:0}8%,25%{opacity:1}33%{opacity:0}}@media(prefers-reduced-motion:reduce){.hero-showcase img{animation:none}.hero-showcase img:first-child{opacity:1}}.section{padding:100px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.section h2{font-size:clamp(34px,5vw,62px);line-height:1;letter-spacing:-.05em;margin:10px 0 0;max-width:620px}.section-intro{color:var(--muted);max-width:360px}.tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:8px}.tab{background:none;border:1px solid var(--line);padding:9px 15px;color:var(--muted);border-radius:30px}.tab.active,.tab:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}.project{display:grid;grid-template-columns:1.08fr 1fr auto;gap:34px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line)}.project.hidden{display:none}.project-shot{aspect-ratio:16/10;overflow:hidden;background:var(--cream)}.project-shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.project:hover img{transform:scale(1.025)}.project h3{font-family:'Playfair Display',serif;font-size:34px;line-height:1.05;margin:8px 0 12px;font-weight:500}.project p{margin:0;color:var(--muted);max-width:430px}.project-meta{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--coral);font-weight:700}.visit{white-space:nowrap;font-size:13px;font-weight:700;border-bottom:1px solid var(--ink);padding-bottom:4px}.visit:hover{color:var(--coral);border-color:var(--coral)}.pricing{background:var(--green);color:var(--paper)}.pricing .eyebrow{color:#e4a07d}.pricing .section-intro{color:#b5c3bb}.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#58796d;margin-top:45px}.plan{background:var(--green);padding:30px}.plan-num{color:#b5c3bb;font-size:12px}.plan h3{font-family:'Playfair Display',serif;font-size:33px;font-weight:500;margin:38px 0 4px}.price{font-size:21px;font-weight:700}.plan p{color:#b5c3bb;max-width:380px}.plan ul,.addons ul{padding-left:18px;color:#b5c3bb}.addons{margin-top:1px;background:var(--green);padding:28px 30px}.addons h3{font-family:'Playfair Display',serif;font-size:26px;margin:0}.addons ul{display:flex;flex-wrap:wrap;gap:8px 38px;margin-bottom:0}.about{display:grid;grid-template-columns:.7fr 1fr;gap:70px}.about h2{font-size:clamp(40px,6vw,72px);margin-top:12px}.about p{font-size:19px;max-width:620px}.muted{color:var(--muted)}.review-link{background:var(--cream);padding:60px 0}.review-link-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.review-link h2{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,60px);line-height:1;margin:0;font-weight:500}.button{background:var(--ink);color:var(--paper);border-color:var(--ink)}.button:hover,.nav-cta:hover{background:var(--coral);border-color:var(--coral)}.contact{background:var(--ink);color:var(--paper)}.contact .section-intro{color:#aab5ae}.contact h2{font-size:clamp(46px,7vw,90px);max-width:780px}.contact .button{background:var(--paper);color:var(--ink);border-color:var(--paper);margin-top:20px}.contact .button:hover{background:var(--coral);color:var(--paper);border-color:var(--coral)}footer{padding:25px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}footer a{margin-left:20px}@media(max-width:800px){.links{gap:12px}.links a:not(.nav-cta){display:none}.hero,.about{grid-template-columns:1fr;gap:35px;padding-bottom:75px}.hero-showcase{margin:0 0 20px}.project{grid-template-columns:1fr;gap:17px}.project h3{font-size:30px}.visit{width:max-content}.section-head,.review-link-inner{display:block}.section-intro{margin-top:20px}.plans{grid-template-columns:1fr}.addons ul{display:block}.addons li{margin-top:8px}}@media(max-width:480px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{height:68px}.nav-cta{padding:8px 10px;font-size:11px}.hero h1{font-size:48px}.section{padding:72px 0}}</style>
-<style>
-.chat-box{width:min(360px,calc(100vw - 28px));padding:0;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 18px 50px rgba(23,33,29,.22)}.chat-head{display:flex;align-items:center;gap:11px;padding:15px 17px;background:var(--green);color:var(--paper)}.chat-head img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(245,243,237,.7)}.chat-head strong{display:block;font-size:14px}.chat-status{display:block;color:#c9ddd3;font-size:11px}.chat-close{margin-left:auto;border:0;background:transparent;color:var(--paper);font-size:22px;line-height:1}.chat-body{padding:17px;background:#f0eee8}.chat-intro{display:flex;gap:9px;align-items:flex-end}.chat-intro img{width:28px;height:28px;border-radius:50%;object-fit:cover}.chat-bubble{max-width:250px;padding:11px 13px;border-radius:4px 14px 14px 14px;background:#fff;color:var(--ink);font-size:13px;line-height:1.45;box-shadow:0 1px 2px rgba(23,33,29,.08)}.chat-actions{margin-top:14px}.chat-actions button{border:1px solid #b8c9c0;background:#fff;border-radius:18px;padding:10px 12px;color:var(--green);font-size:12px;text-align:left}.chat-answer{margin:12px 0 0 37px;padding:10px 12px;border-radius:14px 14px 4px 14px;background:var(--green);color:var(--paper);font-size:12px;line-height:1.45}.chat-cta{display:block;margin-top:14px;text-align:center;background:var(--coral);color:#fff;border:0;border-radius:5px;padding:11px 12px;font-size:12px;font-weight:700}.chat-toggle{transition:transform .3s ease}.chat-toggle:hover{transform:scale(1.04)}
-</style>
-<style>
-.chat-compose{display:flex;gap:7px;margin-top:16px}.chat-compose input{min-width:0;flex:1;border:1px solid #b9cfc5;border-radius:18px;padding:10px 12px;font-size:12px;background:#fff}.chat-send{border:0;border-radius:18px;background:var(--green);color:var(--paper);padding:0 13px;font-size:12px;font-weight:700}.chat-message{margin:10px 0 0 37px;padding:10px 12px;border-radius:16px 16px 5px 16px;background:#fff;font-size:12px;line-height:1.45}
-.tabs{display:flex;flex-direction:column;gap:8px}.tab{width:100%;border-radius:0;text-align:left;padding:16px 18px;display:flex;justify-content:space-between;background:var(--paper);border:1px solid var(--line);color:var(--muted);font-weight:600}.tab:after{content:'+';font-size:20px}.tab.active:after{content:'-'}.home-reviews{padding:75px 0;border-top:1px solid var(--line)}.review-preview{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:center;border-bottom:1px solid var(--line);padding:22px 0}.review-preview img{width:100%;aspect-ratio:4/3;object-fit:cover}.review-preview blockquote{font:500 clamp(24px,3vw,40px)/1.15 'Playfair Display',serif;margin:0}.review-preview figcaption{margin-top:20px;color:var(--muted);font-size:13px}.plan .choose{margin-top:20px;background:var(--paper);color:var(--ink);border-color:var(--paper)}.enquiry{display:none;background:var(--paper);color:var(--ink);padding:35px;margin-top:25px;border:1px solid var(--line)}.enquiry.open{display:block}.enquiry form{display:grid;gap:12px;max-width:650px}.enquiry input,.enquiry textarea{width:100%;border:1px solid var(--line);background:white;padding:12px;color:var(--ink)}.enquiry textarea{min-height:110px}.chat{position:fixed;right:20px;bottom:20px;z-index:5}.chat-toggle{border:0;border-radius:50%;background:var(--coral);color:white;width:52px;height:52px;font-weight:700}.chat-box{display:none;width:280px;background:var(--paper);border:1px solid var(--line);padding:18px;margin-bottom:10px;box-shadow:0 10px 30px #17211d33}.chat-box.open{display:block}.chat-box p{font-size:13px;color:var(--muted);margin:0 0 10px}.chat-actions{display:grid;gap:7px}.chat-actions button{background:var(--cream);border:1px solid var(--line);padding:8px;text-align:left;font-size:12px}.chat-answer{margin-top:12px;font-size:13px}@media(max-width:800px){.review-preview{grid-template-columns:1fr}.tabs{gap:6px}}
-</style>
-<style>
-.work-panel{display:none;border:1px solid var(--ink);border-top:0;padding:0 22px}.work-panel.active{display:block}.project-library{display:none}
-.tab{min-height:150px;background-size:cover;background-position:center;position:relative;overflow:hidden;color:var(--paper);isolation:isolate}.tab:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,33,29,.9),rgba(23,33,29,.28));z-index:-1}.tab:after{position:relative}
-.tabs{flex-direction:row;overflow-x:auto;scroll-behavior:smooth;border-bottom:0;padding:0 0 18px 20px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 min(78vw,380px);min-height:230px;display:block;padding:24px;text-align:left;margin-right:-90px;transition:transform .25s,z-index .25s}.tab:hover,.tab.active{transform:translateY(-8px);z-index:4}.tab:last-child{margin-right:0}.tab:after{position:absolute;right:24px;bottom:22px}.tab-copy{display:block;max-width:265px}.tab-copy strong{display:block;font-size:22px;color:var(--paper);margin-bottom:8px}.tab-copy small{display:block;font-size:13px;line-height:1.5;color:rgba(245,243,237,.82);font-weight:400}.work-nav{display:flex;justify-content:flex-start;gap:8px;margin:12px 0 5px;padding-left:20px}.work-arrow{width:42px;height:42px;border:1px solid var(--ink);background:var(--paper);font-size:20px}.work-arrow:hover{background:var(--ink);color:var(--paper)}
-.work-panel.active{display:flex;overflow-x:auto;gap:18px;scroll-behavior:smooth;scrollbar-width:none}.work-panel.active::-webkit-scrollbar{display:none}.work-panel .project{flex:0 0 min(82vw,760px);display:block;padding:24px 0;border:0}.work-panel .project-shot{display:block;width:100%;aspect-ratio:16/9}.work-panel .project h3{margin-top:16px}.work-panel .project .visit{display:inline-block;margin-top:14px}
-</style>
-<style>
-.tabs{flex-wrap:nowrap;overflow-y:visible}.work-panel{border:0;padding:0}.panel-nav{display:none;gap:8px;margin:10px 0 0}.panel-nav.active{display:flex}.panel-arrow{width:42px;height:42px;border:1px solid var(--ink);background:var(--paper);font-size:20px}.panel-arrow:hover{background:var(--ink);color:var(--paper)}
-</style>
-<style>
-/* Keep the deck spacious and let hover change emphasis without changing geometry. */
-.tabs{gap:24px;padding-left:0;align-items:stretch}
-.tab{flex:0 0 min(82vw,390px);width:min(82vw,390px);height:240px;min-height:240px;margin-right:0;border:0;border-radius:12px;transform:none!important;transition:box-shadow 800ms ease,filter 800ms ease;background-color:var(--ink)}
-.tab:hover,.tab.active{box-shadow:0 18px 35px rgba(23,33,29,.2);filter:saturate(1.08)}
-.work-panel.active{height:min(70vh,560px);min-height:460px;gap:28px;padding:0 4px;align-items:stretch}
-.work-panel .project{flex:0 0 min(82vw,760px);height:100%;padding:28px 0;display:flex;flex-direction:column;justify-content:flex-start}
-.work-panel .project-shot{flex:0 0 auto;aspect-ratio:16/9;max-height:330px}
-.work-panel .project h3{margin-top:18px}
-.panel-nav.active{margin-top:16px}
-@media(max-width:600px){.tabs{gap:16px}.tab{flex-basis:calc(100vw - 28px);width:calc(100vw - 28px);height:220px;min-height:220px}.work-panel.active{height:500px;min-height:500px}.work-panel .project{flex-basis:calc(100vw - 44px)}.work-panel .project-shot{max-height:none}}
-</style>
-<style>
-/* Panels expand to their content while the project track stays horizontal-only. */
-.work-panel{max-height:0;opacity:0;overflow:hidden;transition:max-height 700ms cubic-bezier(.22,1,.36,1),opacity 450ms ease;padding-top:0;padding-bottom:0}
-.work-panel{display:flex;visibility:hidden;flex:0 0 100%;width:100%;pointer-events:none}
-.work-panel.active{height:auto;min-height:0;max-height:900px;opacity:1;visibility:visible;pointer-events:auto;overflow-x:auto;overflow-y:hidden;padding-top:0;padding-bottom:0}
-.work-panel .project{height:auto;min-height:0;align-self:flex-start}
-@media(max-width:600px){.work-panel.active{height:auto;min-height:0;max-height:900px}.work-panel .project{height:auto}}
-</style>
-<style>
-.brand-avatar{width:30px;height:30px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}.creator-signature{display:flex;align-items:center;gap:14px;margin-top:28px;color:var(--muted);font-size:13px}.creator-signature img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--paper);box-shadow:0 0 0 1px var(--line)}.review-trust{display:flex;align-items:center;gap:10px;margin-top:20px;color:var(--muted);font-size:12px}.review-trust img{width:28px;height:28px;border-radius:50%;object-fit:cover}
-.tabs{background:transparent;border:0;padding:0;box-shadow:none}
-</style>
+<link rel="stylesheet" href="style.css">
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
-<header class="nav wrap"><a class="brand" href="index.html">ZYRICK</a><nav class="links"><a href="#work">Work</a><a href="#services">Services</a><a href="feedback.html">Reviews</a><a class="nav-cta" href="#contact">Start a project -&gt;</a></nav></header>
+
+<header class="nav wrap">
+  <a class="brand" href="index.html"><img src="zyrick-avatar.png" alt="">ZYRICK</a>
+  <div class="nav-right">
+    <nav class="links" id="nav-links">
+      <a href="#work">Work</a>
+      <a href="#how-it-works">Process</a>
+      <a href="#services">Services</a>
+      <a href="feedback.html">Reviews</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <a class="nav-cta" href="#contact"><span class="cta-full">Turn browsers into enquiries</span><span class="cta-short">Enquire now</span> &gt;</a>
+  </div>
+</header>
+
 <main>
-<section class="hero wrap"><div><div class="eyebrow">2 slots available this month</div><h1>Websites that make your business <span class="serif">clear.</span></h1><p>I build thoughtful, mobile-first websites that explain what you do, build trust, and make it easier for the right people to enquire.</p></div><div><div class="hero-showcase" aria-label="Selected website previews"><img src="screenshots/landbooklet.jpg" alt="Landbooklets website preview"><img src="screenshots/karim-schools.jpg" alt="Karim Schools website preview"><img src="screenshots/3ub-express.jpg" alt="3Ub Express website preview"><img src="screenshots/braintree-company.jpg" alt="Braintree Company website preview"></div><div class="hero-note">For schools, car dealers, property brands, and growing Nigerian businesses.<br><br><a class="visit" href="#work">See selected work -&gt;</a></div></div></section>
-<section class="section wrap" id="work"><div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Pick a section. Explore the work.</h2></div><p class="section-intro">Scroll across the sections, then open one to see the websites inside it.</p></div><div class="tabs"><button class="tab active" data-filter="all"><span class="tab-copy"><strong>Growing local brands</strong><small>A clear offer and a simple enquiry path for first-time visitors.</small></span></button><button class="tab" data-filter="school"><span class="tab-copy"><strong>Private schools</strong><small>Admissions, community, and trust - so parents know what to do next.</small></span></button><button class="tab" data-filter="car"><span class="tab-copy"><strong>Car dealers and hire services</strong><small>Stock, hire, and contact - so browsers can reach you from the vehicle.</small></span></button><button class="tab" data-filter="real-estate"><span class="tab-copy"><strong>Real estate businesses</strong><small>Listings, inspection, and enquiry - so buyers can find a property and respond.</small></span></button></div><div class="work-nav"><button class="work-arrow" type="button" data-scroll="-1" aria-label="Scroll work sections left">&lt;</button><button class="work-arrow" type="button" data-scroll="1" aria-label="Scroll work sections right">&gt;</button></div><div class="work-panel" data-panel="all"></div><div class="work-panel" data-panel="school"></div><div class="work-panel" data-panel="car"></div><div class="work-panel" data-panel="real-estate"></div><div class="project-library">
-<article class="project" data-category="car"><a class="project-shot" href="https://3ubexpress.framer.website" target="_blank" rel="noreferrer"><img src="screenshots/3ub-express.jpg" alt="3Ub Express website preview"></a><div><div class="project-meta">Car dealer / 3Ub Express</div><h3>Cars, hire, and enquiries in one clear place.</h3><p>A catalogue that helps customers scan the stock, understand the offer, and contact the business about a specific vehicle.</p></div><a class="visit" href="https://3ubexpress.framer.website" target="_blank" rel="noreferrer">Visit site -&gt;</a></article>
-<article class="project" data-category="real-estate"><a class="project-shot" href="https://landbooklet.framer.website" target="_blank" rel="noreferrer"><img src="screenshots/landbooklet.jpg" alt="Landbooklet website preview"></a><div><div class="project-meta">Real estate / Landbooklets</div><h3>Property discovery designed to convert.</h3><p>Listings sit first, with the facts buyers need and a direct path to ask about the right plot.</p></div><a class="visit" href="https://landbooklet.framer.website" target="_blank" rel="noreferrer">Visit site -&gt;</a></article>
-<article class="project" data-category="school"><a class="project-shot" href="https://karimschool.framer.website" target="_blank" rel="noreferrer"><img src="screenshots/karim-schools.jpg" alt="Karim Schools website preview"></a><div><div class="project-meta">School / Karim Schools</div><h3>A warmer, clearer path from interest to admission.</h3><p>Families can understand the school, see the programmes, and know what to do next without digging.</p></div><a class="visit" href="https://karimschool.framer.website" target="_blank" rel="noreferrer">Visit site -&gt;</a></article>
-<article class="project" data-category="school"><a class="project-shot" href="https://braintreecompany.com/" target="_blank" rel="noreferrer"><img src="screenshots/braintree-company.jpg" alt="Braintree Company website preview"></a><div><div class="project-meta">Organisation / Braintree Company</div><h3>Mission-led storytelling with a clear next step.</h3><p>A concise, confident website for helping visitors understand the work and find a way to support it.</p></div><a class="visit" href="https://braintreecompany.com/" target="_blank" rel="noreferrer">Visit site -&gt;</a></article>
-</div></section>
-<section class="section pricing" id="services"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Services & pricing</div><h2>Simple packages. Serious websites.</h2></div><p class="section-intro">Choose the level that matches what your business needs right now.</p></div><div class="plans"><article class="plan"><div class="plan-num">01</div><h3>Business Website</h3><div class="price">â‚¦150kâ€“â‚¦250k</div><p>Clear, professional website for businesses that need:</p><ul><li>Strong first impression</li><li>Clear offer</li><li>Easy enquiry/contact</li><li>Mobile-responsive pages</li></ul></article><article class="plan"><div class="plan-num">02</div><h3>Custom Website</h3><div class="price">â‚¦300kâ€“â‚¦400k</div><p>For businesses that need a tailored setup:</p><ul><li>Property listings</li><li>School admissions flow</li><li>Car sales/hire catalogue</li><li>More specific structure and pages</li></ul></article></div><div class="addons"><h3>Add-ons</h3><ul><li>Monthly maintenance â€” â‚¦25kâ€“â‚¦75k</li><li>AI chatbot for common questions</li><li>Automatic reply suggestions</li><li>Simple lead capture follow-up</li><li>Content help for listings/descriptions</li></ul></div></div></section>
-<section class="section wrap about" id="about"><div><div class="eyebrow">The approach</div><h2>Less noise.<br><span class="serif">More meaning.</span></h2></div><div><p>Iâ€™m Humble Chigozie, a designer and developer focused on clarity, structure, and conversion.</p><p class="muted">I start with what visitors need to understand and do. Then the layout, copy, and next step follow from that. No bloated pages. No decorative detours.</p></div></section>
-<section class="review-link"><div class="wrap review-link-inner"><h2>Hear from people Iâ€™ve worked with.</h2><a class="button" href="feedback.html">Read all feedback â†—</a></div></section>
-<section class="section contact" id="contact"><div class="wrap"><div class="eyebrow">Start a conversation</div><h2>Ready for a clearer website?</h2><p class="section-intro">Tell me about the business. Iâ€™ll tell you what the site needs to do.</p><a class="button" href="https://wa.me/2349031912660" target="_blank" rel="noreferrer">Message on WhatsApp â†—</a></div></section>
-</main><footer class="wrap"><span>Â© 2026 ZYRICK</span><span><a href="mailto:justzyrick@gmail.com">Email</a><a href="https://ig.me/m/zyrick_dev" target="_blank" rel="noreferrer">Instagram</a></span></footer>
-<script>const tabs=document.querySelectorAll('.tab'),library=document.querySelector('.project-library'),projects=[...library.querySelectorAll('.project')],panels=document.querySelectorAll('.work-panel');const categoryImages={all:'screenshots/landbooklet.jpg',school:'screenshots/karim-schools.jpg',car:'screenshots/3ub-express.jpg','real-estate':'screenshots/landbooklet.jpg'};panels.forEach(panel=>{const nav=document.createElement('div');nav.className='panel-nav';nav.innerHTML='<button class="panel-arrow" type="button" data-panel-scroll="-1" aria-label="Scroll projects left">&lt;</button><button class="panel-arrow" type="button" data-panel-scroll="1" aria-label="Scroll projects right">&gt;</button>';panel.after(nav);nav.querySelectorAll('.panel-arrow').forEach(arrow=>arrow.addEventListener('click',()=>panel.scrollBy({left:Number(arrow.dataset.panelScroll)*400,behavior:'smooth'})))});tabs.forEach(tab=>{tab.style.backgroundImage='url("'+categoryImages[tab.dataset.filter]+'")';tab.addEventListener('click',()=>{const filter=tab.dataset.filter,panel=document.querySelector('[data-panel="'+filter+'"]'),nav=panel.nextElementSibling;if(tab.classList.contains('active')){tab.classList.remove('active');panel.classList.remove('active');nav.classList.remove('active');return}tabs.forEach(item=>item.classList.remove('active'));panels.forEach(item=>{item.classList.remove('active');item.nextElementSibling.classList.remove('active')});tab.classList.add('active');projects.filter(project=>filter==='all'||project.dataset.category===filter).forEach(project=>panel.appendChild(project));panel.classList.add('active');nav.classList.add('active')})});document.querySelector('[data-filter="all"]').click();</script>
-<script>
-document.querySelectorAll('body *').forEach(function(node){if(node.children.length===0){node.textContent=node.textContent.replace(/â€”/g,'-').replace(/â€“/g,'-').replace(/â†—/g,'->').replace(/â†“/g,'down').replace(/â‚¦/g,'N').replace(/Â·/g,'/').replace(/â€™/g,"'").replace(/Â©/g,'(c')}});
-document.querySelectorAll('.plan').forEach(function(plan){var button=document.createElement('button');button.className='button choose';button.type='button';button.textContent='Enquire about this package';button.onclick=function(){var box=document.getElementById('enquiry');box.classList.add('open');box.querySelector('[name="Package"]').value=plan.querySelector('h3').textContent;box.scrollIntoView({behavior:'smooth',block:'center'})};plan.appendChild(button)});
-var enquiry=document.createElement('div');enquiry.id='enquiry';enquiry.className='enquiry';enquiry.innerHTML='<h3>Tell me what you need</h3><form action="mailto:justzyrick@gmail.com" method="post" enctype="text/plain"><input name="Package" placeholder="Package" required><input name="Name" placeholder="Your name" required><input name="Email" type="email" placeholder="Your email" required><input name="Business" placeholder="Business name"><textarea name="Message" placeholder="Tell me about the website you need" required></textarea><button class="button" type="submit">Send enquiry by email -&gt;</button></form>';document.querySelector('.plans').parentNode.appendChild(enquiry);
-document.querySelectorAll('.price').forEach(function(price){price.remove()});document.querySelector('.addons li').textContent='Monthly maintenance';
-var review=document.createElement('section');review.className='home-reviews';review.innerHTML='<div class="wrap"><div class="eyebrow">Feedback</div><h2>Good work should feel good to use.</h2><figure class="review-preview"><img src="screenshots/landbooklet.jpg" alt="Landbooklets website preview"><div><blockquote>"The new structure made it much easier for people to see our listings and ask about the right property."</blockquote><figcaption>Amaka Okafor / Founder, Landbooklets</figcaption></div></figure><a class="button" href="feedback.html">Read all feedback -&gt;</a></div>';document.querySelector('.review-link').replaceWith(review);
-var chat=document.createElement('div');chat.className='chat';chat.innerHTML='<div class="chat-box" id="chatbox"><strong>Quick enquiry</strong><p>Hi - I can help you choose a package or start an enquiry.</p><div class="chat-actions"><button data-answer="Business Website is for a clear professional presence and an easy enquiry path.">Which package is right?</button><button data-answer="Custom Website is best for listings, admissions, catalogues, or special flows.">I need something custom</button><button data-answer="Monthly maintenance keeps your website updated. Tell me what site you have now.">I need maintenance</button></div><div class="chat-answer"></div><a class="button" href="https://wa.me/2349031912660" target="_blank" rel="noreferrer">Continue on WhatsApp -&gt;</a></div><button class="chat-toggle" type="button">Chat</button>';document.body.appendChild(chat);chat.querySelector('.chat-toggle').onclick=function(){chat.querySelector('.chat-box').classList.toggle('open')};chat.querySelectorAll('[data-answer]').forEach(function(item){item.onclick=function(){chat.querySelector('.chat-answer').textContent=item.dataset.answer}});
-</script>
-<script>var chatButton=document.querySelector('.chat-toggle');if(chatButton){chatButton.innerHTML='<img src="icons/ai-bot.svg" alt="AI assistant">';chatButton.setAttribute('aria-label','Open AI chatbot')}</script>
-<script>document.querySelectorAll('body *').forEach(function(node){if(node.children.length===0){node.textContent=node.textContent.replace('(c 2026','(c) 2026')}});</script>
-<script>
-var brand=document.querySelector('.brand');if(brand&&!brand.querySelector('.brand-avatar')){var avatar=document.createElement('img');avatar.className='brand-avatar';avatar.src='zyrick-avatar.png';avatar.alt='';brand.prepend(avatar)}
-var about=document.querySelector('.about');if(about&&!about.querySelector('.creator-signature')){var signature=document.createElement('div');signature.className='creator-signature';signature.innerHTML='<img src="zyrick-avatar.png" alt=""><span>Built personally by <strong>Humble Chigozie</strong><br>Designer and developer, ZYRICK</span>';about.querySelector('div:last-child').appendChild(signature)}
-var review=document.querySelector('.review-preview');if(review&&!review.querySelector('.review-trust')){var trust=document.createElement('div');trust.className='review-trust';trust.innerHTML='<img src="zyrick-avatar.png" alt=""> <span>Work and websites by Humble Chigozie</span>';review.querySelector('div:last-child').appendChild(trust)}
-</script>
-<script>
-document.querySelectorAll('.work-arrow').forEach(function(arrow){arrow.addEventListener('click',function(){var track=document.querySelector('.tabs');if(track){track.scrollTo({left:Math.max(0,track.scrollLeft+Number(arrow.dataset.scroll)*420),behavior:'smooth'})}})});
-</script>
-<style>
-.chat-box{width:min(380px,calc(100vw - 24px));padding:0;border:0;border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 20px 60px rgba(23,33,29,.28)}.chat-head{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--green);color:var(--paper)}.chat-head img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(245,243,237,.8)}.chat-head strong{display:block;font-size:14px}.chat-status{display:block;color:#c7ddd4;font-size:11px}.chat-close{margin-left:auto;border:0;background:none;color:var(--paper);font-size:22px}.chat-body{padding:18px;background:#f0eee8}.chat-intro{display:flex;gap:9px;align-items:flex-end}.chat-intro img{width:28px;height:28px;border-radius:50%;object-fit:cover}.chat-bubble{max-width:270px;padding:12px 14px;border-radius:5px 16px 16px 16px;background:#fff;font-size:13px;line-height:1.45}.chat-actions{display:grid;gap:8px;margin:16px 0 0 37px}.chat-actions button{border:1px solid #b9cfc5;background:#fff;border-radius:16px;padding:11px 13px;color:var(--green);font-size:12px;text-align:left}.chat-answer{margin:13px 0 0 37px;padding:11px 13px;border-radius:16px 16px 5px 16px;background:var(--green);color:var(--paper);font-size:12px;line-height:1.45}.chat-cta{display:block;margin:15px 0 0 37px;text-align:center;background:var(--coral);color:#fff;border:0;border-radius:6px;padding:11px;font-size:12px;font-weight:700}.chat-toggle{width:68px;height:68px;padding:4px;border:0;border-radius:50%;background:var(--coral);box-shadow:0 8px 20px #17211d33}.chat-toggle img{display:block;width:100%;height:100%;border-radius:50%}
-</style>
-<style>
-/* The projects revealed by a section are separate cards, not one white panel. */
-.work-panel .project{background:var(--cream);border:0;border-radius:12px;padding:22px;box-shadow:0 8px 20px rgba(23,33,29,.06)}
-.work-panel .project-shot{border:0;border-radius:8px}
-.chat-answer a{display:inline-block;margin-top:7px;border-bottom:1px solid currentColor;font-weight:700}
-@media(max-width:600px){.work-panel .project{padding:16px}}
-</style>
-<script>
-/* One chat setup keeps the composer and its reply handler connected. */
-(function(){
-  var chat=document.querySelector('.chat');
-  if(!chat)return;
-  var box=chat.querySelector('.chat-box');
-  box.innerHTML='<div class="chat-head"><img src="zyrick-avatar.png" alt=""><div><strong>Humble Chigozie</strong><span class="chat-status">ZYRICK / Online now</span></div><button class="chat-close" type="button" aria-label="Close chat">&times;</button></div><div class="chat-body"><div class="chat-intro"><img src="zyrick-avatar.png" alt=""><div class="chat-bubble">Hello, how can I help you today?</div></div><form class="chat-compose"><input type="text" aria-label="Type your message" placeholder="Type your message..." autocomplete="off" required><button class="chat-send" type="submit">Send</button></form><div class="chat-answer" aria-live="polite"></div><a class="chat-cta" href="https://wa.me/2349031912660" target="_blank" rel="noreferrer">Connect with Humble on WhatsApp -&gt;</a></div>';
-  var toggle=chat.querySelector('.chat-toggle'),close=box.querySelector('.chat-close'),form=box.querySelector('.chat-compose'),input=form.querySelector('input'),answer=box.querySelector('.chat-answer');
-  toggle.onclick=function(){box.classList.toggle('open');if(box.classList.contains('open'))input.focus()};
-  close.onclick=function(){box.classList.remove('open')};
-  form.addEventListener('submit',function(event){event.preventDefault();var message=input.value.trim();if(!message)return;var bubble=document.createElement('div');bubble.className='chat-message';bubble.textContent=message;form.before(bubble);var text=message.toLowerCase(),reply='',known=true;if(/price|cost|package|budget/.test(text))reply='There are two website options: a Business Website for a clear, professional presence and easy enquiries, or a Custom Website for tailored features such as listings, admissions, and catalogues.';else if(/service|offer|website|build|make|design/.test(text))reply='ZYRICK designs and builds clear, mobile-first websites that explain a business, build trust, and make it easier for visitors to enquire.';else if(/school|admission|education|parent/.test(text))reply='For private schools, the focus is admissions, community, and trust so parents can understand the school and know what to do next.';else if(/car|vehicle|hire|dealer/.test(text))reply='For car dealers and hire services, the site can present stock, hire options, and direct contact from a specific vehicle.';else if(/property|real estate|land|listing|inspection/.test(text))reply='For real-estate businesses, the focus is listings, inspection, and enquiry so buyers can find the right property and respond.';else if(/process|start|how.*work|enquir/.test(text))reply='Start by sharing your business, what visitors need to do, and the website you have in mind. Humble can then recommend the right direction.';else if(/maintenance|update|support/.test(text))reply='Monthly maintenance is available to keep a launched website updated. Share what you need changed and Humble can advise.';else if(/work|project|portfolio/.test(text))reply='You can explore the work section above for examples in schools, car services, property, and local businesses.';else if(/hello|^hi\b|contact|whatsapp|human/.test(text))reply='Hello! Tell me a little about your business and what you need the website to do.';else known=false;if(known){answer.textContent=reply}else{answer.innerHTML='I do not have that information on this website yet. <a href="https://wa.me/2349031912660" target="_blank" rel="noreferrer">Chat with Humble on WhatsApp -&gt;</a>'}input.value='';input.focus()});
-})();
-</script>
-<style>
-/* A slightly more prominent, still restrained hero preview. */
-.hero{grid-template-columns:1fr .85fr;gap:55px}.hero-showcase{max-width:430px}
-.chat-suggestions{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0 37px}.chat-suggestions-label{width:100%;color:var(--muted);font-size:11px}.chat-suggestion{border:1px solid #b9cfc5;background:#fff;border-radius:14px;padding:7px 10px;color:var(--green);font-size:11px;text-align:left}.chat-suggestion:hover{background:var(--green);color:var(--paper)}
-@media(max-width:800px){.hero{grid-template-columns:1fr;gap:35px}.hero-showcase{max-width:430px}}
-@media(max-width:600px){.hero{padding:78px 0 68px;gap:30px}.hero-showcase{width:100%;max-width:none;margin:0 0 18px;aspect-ratio:16/10}.hero-note{padding-top:14px}.hero h1{font-size:clamp(46px,14vw,62px)}.hero p{font-size:16px}}
-</style>
-<script>
-/* Suggested questions only use topics the on-page assistant understands. */
-(function(){
-  var chat=document.querySelector('.chat');
-  if(!chat)return;
-  var body=chat.querySelector('.chat-body'),form=chat.querySelector('.chat-compose'),input=form&&form.querySelector('input');
-  if(!body||!form||!input)return;
-  var suggestions=document.createElement('div');
-  suggestions.className='chat-suggestions';
-  suggestions.innerHTML='<span class="chat-suggestions-label">Try asking:</span><button class="chat-suggestion" type="button">What services do you offer?</button><button class="chat-suggestion" type="button">Which package is right for me?</button><button class="chat-suggestion" type="button">How do you help private schools?</button><button class="chat-suggestion" type="button">What is your process?</button><button class="chat-suggestion" type="button">Do you offer maintenance?</button>';
-  body.querySelector('.chat-intro').after(suggestions);
-  suggestions.querySelectorAll('.chat-suggestion').forEach(function(button){button.addEventListener('click',function(){input.value=button.textContent;form.requestSubmit()})});
-})();
-</script>
-<style>.hero-cta{margin-top:8px}</style>
-<script>
-(function(){
-  var firstCategory=document.querySelector('.tab[data-filter="all"] strong');
-  if(firstCategory)firstCategory.textContent='Growing brands';
 
-  var heroCopy=document.querySelector('.hero > div:first-child');
-  if(heroCopy&&!heroCopy.querySelector('.hero-cta')){
-    var callLink=document.createElement('a');
-    callLink.className='button hero-cta';
-    callLink.href='https://calendly.com/zyrick/30min';
-    callLink.target='_blank';
-    callLink.rel='noreferrer';
-    callLink.textContent='Book a call ->';
-    heroCopy.querySelector('p').after(callLink);
-  }
+  <section class="hero wrap">
+    <div>
+      <div class="eyebrow">2 slots available this month</div>
+      <h1>Websites that turn browsers into <span class="serif">enquiries.</span></h1>
+      <p>I build enquiry-first websites for property brands and car dealers — clear listings, clear stock, and a straight path from visitor to message.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://wa.me/2349031912660" target="_blank" rel="noreferrer">Turn browsers into enquiries &gt;</a>
+        <a class="visit" href="#work">See selected work &gt;</a>
+      </div>
+      <div class="hero-note">Built for property brands and car dealers who need visitors to enquire, not just look.</div>
+    </div>
+    <div>
+      <div class="hero-showcase" aria-label="Selected website previews">
+        <img src="screenshots/landbooklet.jpg" alt="Landbooklets website preview">
+        <img src="screenshots/3ub-express.jpg" alt="3Ub Express website preview">
+        <img src="screenshots/karim-schools.jpg" alt="Karim Schools website preview">
+        <img src="screenshots/braintree-company.jpg" alt="Braintree Company website preview">
+      </div>
+    </div>
+  </section>
 
-  document.querySelectorAll('.plan .choose').forEach(function(button){
-    button.onclick=function(){window.open('https://wa.me/2349031912660','_blank','noopener,noreferrer')};
-  });
-})();
-</script>
-</body></html>
+  <section class="section wrap" id="work">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Selected work</div>
+        <h2>Built for people who need enquiries, not just visits.</h2>
+      </div>
+      <p class="section-intro">Property brands and car dealers lead the portfolio — the same enquiry-first approach carries through everywhere else.</p>
+    </div>
+
+    <article class="work-feature reveal">
+      <a class="work-shot" href="https://landbooklet.framer.website" target="_blank" rel="noreferrer">
+        <img src="screenshots/landbooklet.jpg" alt="Landbooklets website preview">
+      </a>
+      <div>
+        <div class="work-meta">Real estate / Landbooklets</div>
+        <h3>Property discovery designed to convert.</h3>
+        <p>Listings sit first, with the facts buyers need and a direct path to enquire about the right plot — so browsing turns into a message, not a bounce.</p>
+        <blockquote class="work-quote">"The new structure made it much easier for people to see our listings and ask about the right property."<cite>Amaka Okafor</cite></blockquote>
+        <a class="visit" href="https://landbooklet.framer.website" target="_blank" rel="noreferrer">Visit site &gt;</a>
+      </div>
+    </article>
+
+    <article class="work-feature reveal">
+      <a class="work-shot" href="https://3ubexpress.framer.website" target="_blank" rel="noreferrer">
+        <img src="screenshots/3ub-express.jpg" alt="3Ub Express website preview">
+      </a>
+      <div>
+        <div class="work-meta">Car dealer / 3Ub Express</div>
+        <h3>From scrolling stock to sending a message.</h3>
+        <p>A catalogue that lets customers scan the stock, understand pricing and hire terms, and enquire about a specific vehicle in one tap.</p>
+        <blockquote class="work-quote">"Customers can finally browse the cars without calling us for every detail. The site is clean, fast, and easy to use on a phone."<cite>Ebube, Director, 3Ub Express</cite></blockquote>
+        <a class="visit" href="https://3ubexpress.framer.website" target="_blank" rel="noreferrer">Visit site &gt;</a>
+      </div>
+    </article>
+
+    <div class="work-more-head"><span>More work, same approach</span></div>
+    <div class="work-grid">
+      <article class="work-card reveal">
+        <a class="work-shot" href="https://karimschool.framer.website" target="_blank" rel="noreferrer">
+          <img src="screenshots/karim-schools.jpg" alt="Karim Schools website preview">
+        </a>
+        <h4>Karim Schools</h4>
+        <p>A clearer path from interest to admission, so families know what to do next without digging.</p>
+        <a class="visit" href="https://karimschool.framer.website" target="_blank" rel="noreferrer">Visit site &gt;</a>
+      </article>
+      <article class="work-card reveal">
+        <a class="work-shot" href="https://braintreecompany.com/" target="_blank" rel="noreferrer">
+          <img src="screenshots/braintree-company.jpg" alt="Braintree Company website preview">
+        </a>
+        <h4>Braintree Company</h4>
+        <p>Mission-led storytelling paired with one clear next step for every visitor.</p>
+        <a class="visit" href="https://braintreecompany.com/" target="_blank" rel="noreferrer">Visit site &gt;</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="how-it-works">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">The process</div>
+        <h2>From first message to live site.</h2>
+      </div>
+      <p class="section-intro">A simple, four-step process so you know exactly what happens before you enquire.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-top">
+          <div class="step-num">01</div>
+          <img class="step-photo" src="screenshots/discovery-call.png" alt="">
+        </div>
+        <h3>Discovery call</h3>
+        <p>We talk through your listings or stock, who your buyers are, and what's stopping them from enquiring today.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-top">
+          <div class="step-num">02</div>
+          <img class="step-photo" src="screenshots/build-call.png" alt="">
+        </div>
+        <h3>Build</h3>
+        <p>I design and build a mobile-first site around your listings or inventory, with an enquiry path on every page.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-top">
+          <div class="step-num">03</div>
+          <img class="step-photo" src="screenshots/launch-call.png" alt="">
+        </div>
+        <h3>Launch</h3>
+        <p>Your site goes live, connected to WhatsApp, email, or your CRM — wherever your enquiries need to land.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-top">
+          <div class="step-num">04</div>
+          <img class="step-photo" src="zyrick-avatar.png" alt="">
+        </div>
+        <h3>Ongoing support</h3>
+        <p>Monthly maintenance keeps listings, stock, and content current, so the site keeps converting after launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Services &amp; pricing</div>
+          <h2>Websites built to convert, not just look good.</h2>
+        </div>
+        <p class="section-intro">Two ways to get a property or dealer site that turns visitors into enquiries.</p>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <div class="plan-num">01</div>
+          <h3>Listings Website</h3>
+          <p>A clear, enquiry-ready website for a single property brand or car dealer:</p>
+          <ul>
+            <li>Property or vehicle listings, organised and easy to browse</li>
+            <li>An enquiry button on every listing</li>
+            <li>Mobile-first, fast on a browsing customer's phone</li>
+            <li>One clear contact path — WhatsApp, call, or form</li>
+          </ul>
+          <button class="button choose" type="button">Enquire about this package &gt;</button>
+        </article>
+        <article class="plan reveal">
+          <div class="plan-num">02</div>
+          <h3>Custom Enquiry Site</h3>
+          <p>For dealers and property brands that need more structure:</p>
+          <ul>
+            <li>Advanced filtering — location, price, vehicle type</li>
+            <li>Inspection or test-drive booking flow</li>
+            <li>Lead capture that routes enquiries straight to you</li>
+            <li>Multiple listing categories or branches</li>
+          </ul>
+          <button class="button choose" type="button">Enquire about this package &gt;</button>
+        </article>
+      </div>
+      <div class="addons">
+        <h3>Add-ons</h3>
+        <ul>
+          <li>Monthly maintenance</li>
+          <li>WhatsApp enquiry bot for common questions</li>
+          <li>Automatic reply suggestions for new enquiries</li>
+          <li>Content help for listings and descriptions</li>
+        </ul>
+      </div>
+
+      <div class="enquiry" id="enquiry">
+        <h3>Tell me what you need</h3>
+        <form action="mailto:justzyrick@gmail.com" method="post" enctype="text/plain">
+          <input name="Package" placeholder="Package" required>
+          <input name="Name" placeholder="Your name" required>
+          <input name="Email" type="email" placeholder="Your email" required>
+          <input name="Business" placeholder="Business name">
+          <textarea name="Message" placeholder="Tell me about your listings or stock, and what you need the website to do" required></textarea>
+          <button class="button" type="submit">Send enquiry by email &gt;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap about" id="about">
+    <div>
+      <div class="eyebrow">The approach</div>
+      <h2>Less noise.<br><span class="serif">More enquiries.</span></h2>
+    </div>
+    <div>
+      <p>I'm Humble Chigozie — I build websites for property brands and car dealers, built around one job: turning a visit into an enquiry.</p>
+      <p class="muted">I start with what a buyer or browser needs to see and do next. Then the listings, the copy, and the enquiry path follow from that. No bloated pages. No decorative detours.</p>
+      <div class="creator-signature">
+        <img src="zyrick-avatar.png" alt="">
+        <span>Built personally by <strong>Humble Chigozie</strong><br>Designer and developer, ZYRICK</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-reviews wrap">
+    <div class="eyebrow">Feedback</div>
+    <h2>Good work should feel good to use.</h2>
+    <figure class="review-preview">
+      <img src="screenshots/landbooklet.jpg" alt="Landbooklets website preview">
+      <div>
+        <blockquote>"The new structure made it much easier for people to see our listings and ask about the right property."</blockquote>
+        <figcaption>Amaka Okafor</figcaption>
+        <div class="review-trust">
+          <img src="zyrick-avatar.png" alt="">
+          <span>Work and websites by Humble Chigozie</span>
+        </div>
+      </div>
+    </figure>
+    <div class="review-link">
+      <div class="wrap review-link-inner">
+        <h2>Hear from people I've worked with.</h2>
+        <a class="button" href="feedback.html">Read all feedback &gt;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap contact-inner">
+      <div>
+        <div class="eyebrow">Start a conversation</div>
+        <h2>Ready for a site that turns browsers into enquiries?</h2>
+        <p class="section-intro">Tell me about your listings or your stock. I'll tell you exactly what the site needs to do to get people to enquire.</p>
+        <a class="button" href="https://wa.me/2349031912660" target="_blank" rel="noreferrer">Get a site that turns browsers into enquiries &gt;</a>
+      </div>
+      <div class="contact-photo">
+        <div class="workspace-stack">
+          <figure class="workspace-frame w1">
+            <img src="screenshots/discovery-call.png" alt="">
+            <figcaption><span class="frame-num">01</span> Discovery call</figcaption>
+          </figure>
+          <figure class="workspace-frame w2">
+            <img src="screenshots/build-call.png" alt="">
+            <figcaption><span class="frame-num">02</span> Build</figcaption>
+          </figure>
+          <figure class="workspace-frame w3">
+            <img src="screenshots/launch-call.png" alt="">
+            <figcaption><span class="frame-num">03</span> Launch</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 ZYRICK</span>
+  <span>
+    <a href="mailto:justzyrick@gmail.com">Email</a>
+    <a href="https://ig.me/m/zyrick_dev" target="_blank" rel="noreferrer">Instagram</a>
+  </span>
+</footer>
+
+<div class="chat">
+  <div class="chat-box" id="chatbox">
+    <div class="chat-head">
+      <img src="zyrick-avatar.png" alt="">
+      <div>
+        <strong>Humble Chigozie</strong>
+        <span class="chat-status">ZYRICK / Online now</span>
+      </div>
+      <button class="chat-close" type="button" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="chat-body">
+      <div class="chat-intro">
+        <img src="zyrick-avatar.png" alt="">
+        <div class="chat-bubble">Hello — tell me about your listings or your stock, and I'll help you find the right package.</div>
+      </div>
+      <div class="chat-suggestions">
+        <span class="chat-suggestions-label">Try asking:</span>
+        <button class="chat-suggestion" type="button">What services do you offer?</button>
+        <button class="chat-suggestion" type="button">Which package fits a car dealership?</button>
+        <button class="chat-suggestion" type="button">How do you handle property listings?</button>
+        <button class="chat-suggestion" type="button">What's your process?</button>
+        <button class="chat-suggestion" type="button">Do you offer maintenance?</button>
+      </div>
+      <form class="chat-compose">
+        <input type="text" aria-label="Type your message" placeholder="Type your message..." autocomplete="off" required>
+        <button class="chat-send" type="submit">Send</button>
+      </form>
+      <div class="chat-answer" aria-live="polite"></div>
+      <a class="chat-cta" href="https://wa.me/2349031912660" target="_blank" rel="noreferrer">Connect with Humble on WhatsApp &gt;</a>
+    </div>
+  </div>
+  <button class="chat-toggle" type="button" aria-label="Open AI chatbot"><img src="icons/ai-bot.svg" alt=""></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
