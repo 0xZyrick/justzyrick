@@ -1700,3 +1700,11 @@ h2 + .lede, h1 + .lede { margin-top: 0; }
 }
 @media (max-width: 520px) { .plan-badge { width: 92px; height: 92px; right: -6px; top: -26px; } .plan-badge b { font-size: 1rem; } }
 .plan-wide .plan-for { color: rgba(10,10,10,.9); }
+
+/* v22: call icon on Book a call buttons; "1." step numbers */
+.btn .ico { display: inline-grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 50%; background: #0A0A0A; color: #fff; }
+.btn-primary .ico, .plan-btn-ink .ico, .plan-btn-accent .ico { background: #0A0A0A; color: var(--accent); }
+.plan-btn-accent .ico { color: #fff; }
+.plan-btn-light .ico, .btn-accent .ico { background: var(--accent); color: #0A0A0A; }
+.btn:hover .ico { transform: none; }
+.how-list li::before { content: counter(step) "."; }
