@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Humble Chigozie","alternateName":"Zyrick","jobTitle":"Product Engineer","url":"https://YOUR-DOMAIN.com","image":"https://YOUR-DOMAIN.com/assets/portrait-hero.jpg","sameAs":["https://www.behance.net/zyrickux","https://github.com/0xZyrick","https://x.com/humblechigozie_"]}</script>
 </head>
@@ -29,129 +29,274 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     <nav id="nav-links" class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
+      <a href="index.html#offer">Services</a>
+      <a href="index.html#selected-work">Work</a>
       <a href="case-studies.html" aria-current="page">Case Studies</a>
-      <a href="about.html">About</a>
+      <a href="index.html#about">About</a>
       <a class="nav-cta" href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 <main id="main">
 <section class="page-head">
-  <div class="wrap">
-    <span class="eyebrow">Case studies</span>
-    <h1>How the decisions were made, not just how it looks.</h1>
+  <div class="wrap head-split">
+    <div class="head-main"><span class="eyebrow">Case studies</span>
+    <h1>How the decisions were made, not just how it looks.</h1></div>
+    <div class="head-aside">
     <p class="lede">Each one covers the context, the system behind it, the interaction decisions and what came of it.</p>
+    <div class="cta-row"><a class="btn btn-primary" href="https://calendly.com/humblechigozie/30min" target="_blank" rel="noopener noreferrer">Book a call</a><a class="btn btn-ghost" href="index.html#offer">See what I offer</a></div>
+    </div>
   </div>
 </section>
-<section class="section" style="padding-top:0" aria-label="Case study index">
-  <div class="wrap"><nav class="cs-index" aria-label="Case studies">
-    <a href="#zap-fc"><span class="n">01</span><span class="t">ZAP FC</span><span class="c">Gaming, Blockchain</span></a>
-    <a href="#cipher"><span class="n">02</span><span class="t">CIPHER</span><span class="c">Blockchain, Gaming</span></a>
-    <a href="#stark"><span class="n">03</span><span class="t">STARK</span><span class="c">Gaming, Blockchain</span></a>
-    <a href="#wippo"><span class="n">04</span><span class="t">Wippo</span><span class="c">Digital product</span></a>
-    <a href="#product-ux"><span class="n">05</span><span class="t">Product UX projects</span><span class="c">Healthcare, FinTech, Web3</span></a>
+<section class="numbers" aria-labelledby="num-h">
+  <div class="wrap">
+    <div class="head-split">
+      <div class="head-main"><span class="eyebrow">Results for clients</span>
+      <h2 id="num-h">What my clients got.</h2></div>
+      <p class="head-aside">Results from the products I designed and built, from clinic booking to hackathon games.</p>
+    </div>
+    <div class="num-clip"><div class="num-grid">
+      <div class="num-cell"><b>15+</b><span>Clients worked with</span></div>
+      <div class="num-cell"><b>5</b><span>Live health demos</span></div>
+      <div class="num-cell"><b>&lt; 5 min</b><span>For a nurse to book an appointment on Deskly</span></div>
+      <div class="num-cell"><b>97</b><span>Lighthouse performance score on the FHIR patient gateway</span></div>
+      <div class="num-cell"><b>+60%</b><span>More plays on Stark after moving wallet connection to after the first game</span></div>
+      <div class="num-cell"><b>1,000+</b><span>Players on Cipher, a hackathon game</span></div>
+    </div></div>
+  </div>
+</section>
+<div class="cs-body"><section class="section cs-nav-sec" style="padding-top:0" aria-label="Case study categories">
+  <div class="wrap"><nav class="cs-nav" aria-label="Case study categories">
+    <a href="#healthtech"><span>01</span>Healthtech<small>6 products</small></a>
+    <a href="#fintech"><span>02</span>FinTech<small>Product UX</small></a>
+    <a href="#web3"><span>03</span>Blockchain &amp; Web3<small>Product UX</small></a>
+    <a href="#gaming"><span>04</span>Gaming<small>Stark, Cipher, ZAP FC</small></a>
+    <a href="#digital-product"><span>05</span>Digital product<small>Wippo</small></a>
   </nav></div>
 </section>
-<article id="zap-fc" class="case" aria-labelledby="zap-fc-h">
+<section id="healthtech" class="cat" aria-labelledby="healthtech-h">
   <div class="wrap">
-    <div class="case-head">
-      <span class="num">01</span>
-      <div class="title"><span class="label">Gaming, Blockchain, Game experiment</span><h2 id="zap-fc-h">ZAP FC</h2><p class="cs-sub">Designing strategy around human psychology</p><p class="lede">An onchain football strategy game built around simultaneous decisions and psychological gameplay.</p></div>
+    <div class="cat-head">
+      <div class="l"><span class="cat-num">01</span><h2 id="healthtech-h">Healthtech</h2><p class="cat-model">Care-centric design</p><p class="cat-intro">Deskly, Kemist, FHIRSignal, BioSignalFlow, the DICOM planner and CarePass. Most run on simulated data.</p></div>
+      <div class="r"><span class="label">Optimize for</span><p class="cat-rule">Safe task completion, clinical accuracy, continuity of care and reduced cognitive burden.</p></div>
     </div>
-    <div class="wide-shot"><figure class="shot" style="--tone:#FF7849;--tone-ink:#101311">
-  <div class="ph" aria-hidden="true"><span>Gaming, Blockchain</span></div>
-  <img src="assets/projects/zap-fc.jpg" alt="ZAP FC clubhouse screen with practice ladder and live match" width="1100" height="672" loading="lazy" decoding="async" onerror="this.remove()">
-</figure></div>
-    <div class="case-body">
-      <div class="cs-lead"><p>ZAP FC is a fully onchain football strategy game built on Starknet, designed around psychological prediction rather than conventional football mechanics. Instead of dribbling, aiming, or mastering timing, two players simultaneously commit to hidden decisions, attempting to anticipate each other's next move. From a product perspective, the interesting challenge is making a mind game feel like football while keeping its underlying rules understandable. The UX revolves around communicating intent, uncertainty, and consequences clearly, ensuring players understand what they're deciding and why the outcome occurred. The commit-reveal architecture also introduces a trust requirement: neither player should be able to see or manipulate the other's decision before both have committed. Every interaction and presentation decision should reinforce the central mechanic: you're not playing the pitch; you're playing the person reading it.</p><a class="btn btn-primary" href="https://playzap.vercel.app/" target="_blank" rel="noopener noreferrer">Play ZAP FC <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
-      <div class="cs-sec"><div class="k"><h3>Context</h3></div><div class="v"><p>Exploring how football can become an enjoyable onchain game.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Architecture</h3></div><div class="v"><p>A two-player strategy game built around hidden decisions, simultaneous commitment and outcome resolution.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>UX decisions</h3></div><div class="v"><p>Football provides the familiar visual language, while the underlying experience is a mind game.</p><p>Players should understand their choices without needing to understand complicated blockchain mechanics.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Result</h3></div><div class="v"><p>Moving wallet connection to after play showed the same pattern in ZAP FC. Many players also played without realising it was an onchain game, which was the goal: keep the architecture out of the player's way.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Principle</h3></div><div class="v"><p>A mind game wearing football's clothes.</p></div></div>
+    <article id="deskly" class="proj" aria-labelledby="deskly-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/deskly.jpg" alt="Deskly landing page with a staff day view showing booked, checked in and waiting patients" width="1236" height="604" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Product, Frontend, Simulated data</span><h3 id="deskly-h">Deskly</h3><p class="proj-sub">Clinic operations for small private practices</p>
+      <p class="proj-lead">Clinic operations for small private practices: booking, intake, day view, payments and reminders. Built as a realistic product demo with simulated data only.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>&lt; 5 min</b><span>Booked in a test with a nurse</span></div></div><div class="tech"><span>Next.js</span><span>Design system</span></div></div>
+      <a class="btn btn-primary" href="https://desklyhq.vercel.app/" target="_blank" rel="noopener noreferrer">View project <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
   </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="Deskly system breakdown"><div class="bk"><h4>Architecture</h4><p>A Next.js app with three connected areas: clinic setup, patient booking and a staff schedule. It stores no clinical records, and payments and reminders are simulated.</p></div><div class="bk"><h4>UI solution</h4><p>A seven-step setup, a mobile-first booking flow from service to confirmation, and a day and week schedule with check-in, walk-ins and payments.</p></div><div class="bk"><h4>Measured</h4><p>One nurse booked an appointment in under five minutes and said it was much faster than her usual way.</p></div></div></details>
 </article>
-<article id="cipher" class="case dark" aria-labelledby="cipher-h">
-  <div class="wrap">
-    <div class="case-head">
-      <span class="num">02</span>
-      <div class="title"><span class="label">Blockchain, Gaming, Dojo Game Jam winner</span><h2 id="cipher-h">CIPHER</h2><p class="cs-sub">Understanding the cost of introducing infrastructure too early</p><p class="lede">A blockchain game demonstrating wallet integration, onboarding and gameplay experience design.</p></div>
-    </div>
-    <div class="wide-shot"><figure class="shot" style="--tone:#C9B8FF;--tone-ink:#101311">
-  <div class="ph" aria-hidden="true"><span>Blockchain, Gaming</span></div>
-  <img src="assets/projects/cipher.jpg" alt="Cipher main menu with resume, create a room and join a room" width="1100" height="582" loading="lazy" decoding="async" onerror="this.remove()">
-</figure></div>
-    <div class="case-body">
-      <div class="cs-lead"><p>Cipher exposed an important onboarding problem in Web3 gaming: asking players to connect a Cartridge wallet before experiencing the game. During testing, a player encountered the wallet requirement and chose not to proceed, illustrating how technical infrastructure can become a barrier before users understand the product's value. The problem wasn't necessarily wallet complexity itself, but its position in the user journey. This informed a broader product principle: players should have a reason to care about the game before being asked to care about its underlying infrastructure. Rather than treating wallet connection as a mandatory entry requirement, I began examining how ownership, authentication, and blockchain interactions could be introduced progressively, at moments when they made sense to the player's intent.</p><a class="btn btn-primary" href="https://playcipher.vercel.app/" target="_blank" rel="noopener noreferrer">Play Cipher <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
-      <div class="cs-sec"><div class="k"><h3>Architecture</h3></div><div class="v"><p>A game experience integrated with Cartridge wallet infrastructure.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>UX decisions</h3></div><div class="v"><p>Wallet connection and entry flows are important parts of the overall product experience.</p><p>My experience with Cipher showed that requiring a wallet connection before gameplay adds friction before users experience the value.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Principle</h3></div><div class="v"><p>Infrastructure should support the experience, not become the experience.</p></div></div>
+<article id="kemist" class="proj" aria-labelledby="kemist-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/kemist.png" alt="Kemist landing page: Know it's on the shelf before you go, with a pharmacy result card showing live stock, price and a reserve button" width="1310" height="800" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Product, Frontend, Simulated data</span><h3 id="kemist-h">Kemist</h3><p class="proj-sub">Know it's on the shelf before you go</p>
+      <p class="proj-lead">Finding a specific medicine usually means calling around to see who has it. Kemist checks licensed pharmacies for live stock, shows the nearest and cheapest, and lets you reserve and pay so it is held for you.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>60 min</b><span>Max stock age</span></div><div class="metric"><b>45 min</b><span>Reservation hold</span></div><div class="metric"><b>3</b><span>Steps to reserve</span></div></div></div>
+      <a class="btn btn-primary" href="https://kemistapp.vercel.app/" target="_blank" rel="noopener noreferrer">View project <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
   </div>
+  <details class="proj-more"><summary>System breakdown</summary><p class="more-lead">Built as a prototype running on demonstration data.</p><div class="breakdown" role="group" aria-label="Kemist system breakdown"><div class="bk"><h4>UI solution</h4><p>A three step flow: search by brand or generic name, compare pharmacies by distance, price or freshness, then reserve with a pickup code held for 45 minutes. The same stock engine powers a live demo panel on the page and a WhatsApp chat.</p></div><div class="bk"><h4>Trust rules</h4><p>Only pharmacies on the licensed registry appear. Stock older than an hour is refreshed before it shows, and an unfilled order is refunded.</p></div></div></details>
 </article>
-<article id="stark" class="case" aria-labelledby="stark-h">
-  <div class="wrap">
-    <div class="case-head">
-      <span class="num">03</span>
-      <div class="title"><span class="label">Gaming, Blockchain, Game experiment</span><h2 id="stark-h">STARK</h2><p class="cs-sub">Designing the experience before introducing the technology</p><p class="lede">A strategy puzzle game exploring gameplay interaction, progression and wallet onboarding.</p></div>
-    </div>
-    <div class="wide-shot"><figure class="shot" style="--tone:#23304A;--tone-ink:#F4F1E9">
-  <div class="ph" aria-hidden="true"><span>Gaming, Blockchain</span></div>
-  <img src="assets/projects/stark.jpg" alt="Stark column puzzle game board" width="1100" height="733" loading="lazy" decoding="async" onerror="this.remove()">
-</figure></div>
-    <div class="case-body">
-      <div class="cs-lead"><p>STARK became an opportunity to explore the opposite onboarding approach. The game uses a column-based puzzle mechanic, with the tagline "Fill the column." The product experience was designed to let players access the first two levels without authentication, allowing them to understand the gameplay before being asked to create an account. Login becomes relevant when players want to save progress, while social authentication is prioritized before wallet connection. This was a deliberate application of progressive disclosure: separating the immediate goal of playing from the later need for persistence and blockchain participation. Other decisions, including the Hold/Swap interaction and the separation of Offchain and Onchain experiences, were intended to make the game accessible without removing its Web3 capabilities. Early testing reinforced the reasoning: players engaged with the game, replayed levels, chased scores, and shared screenshots without needing an explanation of the underlying technology.</p><a class="btn btn-primary" href="https://playstark.vercel.app/" target="_blank" rel="noopener noreferrer">Play Stark <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
-      <div class="cs-sec"><div class="k"><h3>Context</h3></div><div class="v"><p>Exploring how blockchain can exist underneath a game without getting in the player's way.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Architecture</h3></div><div class="v"><p>A level-based column-merging puzzle with gameplay progression and optional onchain interaction.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>UX decisions</h3></div><div class="v"><p>Dark, focused interface with minimal distractions and clear gameplay controls.</p><p>Let players experience the game before introducing account and wallet requirements. Levels 1 and 2 are playable before login, and login enables saving progress.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Result</h3></div><div class="v"><p>Moving wallet connection from before play to after play lifted plays by about 60%. Many players had been dropping at the first prompt to connect a wallet.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Principle</h3></div><div class="v"><p>Gameplay first, infrastructure second.</p></div></div>
+<article id="fhirsignal" class="proj" aria-labelledby="fhirsignal-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/fhirsignal.png" alt="Secure FHIR Patient Gateway clinical dashboard showing a patient profile and vitals cards for blood pressure, glucose, heart rate, SpO2 and temperature" width="1312" height="690" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Product, Data, Simulated data</span><h3 id="fhirsignal-h">FHIRSignal</h3><p class="proj-sub">Secure FHIR Patient Gateway</p>
+      <p class="proj-lead">A care team serving several practices needs one clear view without mixing patient data across tenants. Isolation is written as row level policies in the database, with a panel so a reviewer can see how those rules evaluate.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>97</b><span>Performance</span></div><div class="metric"><b>95</b><span>Accessibility</span></div></div><div class="tech"><span>Next.js 14</span><span>React 18</span><span>TypeScript</span><span>Tailwind</span><span>FHIR R4</span></div></div>
+      <a class="btn btn-primary" href="https://fhirsignal.vercel.app/" target="_blank" rel="noopener noreferrer">View project <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
   </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="FHIRSignal system breakdown"><div class="bk"><h4>Architecture</h4><p>Next.js 14 and React 18 with TypeScript and Tailwind. Data is HL7 FHIR R4 JSON, checked against Observation rules on the client. Tenant isolation is modelled as simulated Neon Postgres row-level security with mocked session tokens. There is no real database or auth yet.</p></div><div class="bk"><h4>UI solution</h4><p>A panel lets a reviewer see how the isolation rules evaluate, next to the vitals the care team reads.</p></div><div class="bk"><h4>Measured</h4><p>Lighthouse: performance 97, accessibility 95, best practices 96, SEO 100. First paint 0.6 s and largest content 0.7 s.</p></div></div></details>
 </article>
-<article id="wippo" class="case dark" aria-labelledby="wippo-h">
-  <div class="wrap">
-    <div class="case-head">
-      <span class="num">04</span>
-      <div class="title"><span class="label">Digital product, Platform</span><h2 id="wippo-h">Wippo</h2><p class="cs-sub">Making the project, rather than the post, the centre of the experience</p><p class="lede">A product exploring how people document, share and develop their creative projects.</p></div>
-    </div>
-    <div class="wide-shot"><figure class="shot" style="--tone:#F4B8C9;--tone-ink:#101311">
-  <div class="ph" aria-hidden="true"><span>Digital product</span></div>
-  <img src="assets/projects/wippo.jpg" alt="Wippo project page showing the Stark project journey" width="1100" height="604" loading="lazy" decoding="async" onerror="this.remove()">
-</figure></div>
-    <div class="case-body">
-      <div class="cs-lead"><p>Wippo is a platform built around a different product question: what if everything people make had a living home instead of being scattered across social platforms? Its central design decision is treating the project as the primary object, rather than treating individual posts as the product. Each project has a current state, while updates, videos, images, live sessions, and other contributions become part of its evolving history. This changes the information architecture from a conventional social feed into a project-centred experience. Visitors can understand what someone is making, see its latest development, and explore how it has evolved over time. The reasoning also challenges the pressure to showcase only finished work: unfinished ideas, experiments, setbacks, and progress are all meaningful parts of a project's journey. The goal is to make documenting the process as natural as sharing the outcome, while giving creators a persistent identity for the things they make.</p><a class="btn btn-primary" href="https://wippo.com/" target="_blank" rel="noopener noreferrer">Visit Wippo <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
-      <div class="cs-sec"><div class="k"><h3>Context</h3></div><div class="v"><p>Exploring how people can share, document, and connect through the things they make.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Architecture</h3></div><div class="v"><p>The project is the primary entity. Updates, media, milestones and discussions belong to a project instead of existing as disconnected posts.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>UX decisions</h3></div><div class="v"><p>Editorial, minimal and project-focused. The latest state of a project takes visual priority.</p><p>Make it easy to follow something being created over time, rather than consume another social feed.</p></div></div>
-      <div class="cs-sec"><div class="k"><h3>Principle</h3></div><div class="v"><p>The project is the home; everything created or shared becomes part of its journey.</p></div></div>
+<article id="biosignalflow" class="proj" aria-labelledby="biosignalflow-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/biosignalflow.png" alt="Bio Signal Streamer showing a live ECG trace, patient details, vitals and a condition injection panel" width="1311" height="690" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Product, Realtime, Simulated data</span><h3 id="biosignalflow-h">BioSignalFlow</h3><p class="proj-sub">Real Time Bio Signal Streamer</p>
+      <p class="proj-lead">When alerts arrive late or out of context, clinicians start to ignore them. This live cardiac signal view streams with low latency and marks anomalies on the waveform as they happen.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>97</b><span>Performance</span></div><div class="metric"><b>94</b><span>Accessibility</span></div><div class="metric"><b>100</b><span>Best practices</span></div></div><div class="tech"><span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Tailwind</span><span>Canvas</span></div></div>
+      <a class="btn btn-primary" href="https://biosignalflow.vercel.app/" target="_blank" rel="noopener noreferrer">View project <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
   </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="BioSignalFlow system breakdown"><div class="bk"><h4>Architecture</h4><p>Next.js 15 and React 19 with TypeScript and Tailwind. The waveform is drawn on an HTML5 canvas with requestAnimationFrame, and React hooks run the animation loop. There is no charting library, and the stream is simulated on the client.</p></div><div class="bk"><h4>UI solution</h4><p>Anomalies are marked on the waveform as they happen, and the connection status stays visible.</p></div><div class="bk"><h4>Measured</h4><p>Lighthouse: performance 97, accessibility 94, best practices 100, SEO 100. First paint 1.0 s and largest content 1.0 s.</p></div></div></details>
 </article>
-<article id="product-ux" class="case" aria-labelledby="product-ux-h">
-  <div class="wrap">
-    <div class="case-head">
-      <span class="num">05</span>
-      <div class="title"><span class="label">Healthcare, FinTech, Web3, Product UX</span><h2 id="product-ux-h">Product UX projects</h2><p class="cs-sub">Reducing friction and cognitive load across complex interactions</p><p class="lede">Product reasoning and interface design across clinic operations, pharmacy inventory, clinical interoperability, patient telemetry, healthcare payments and Web3 flows.</p></div>
-    </div>
-    <div class="wide-shot"><figure class="shot" style="--tone:#BFE3CC;--tone-ink:#101311">
-  <div class="ph" aria-hidden="true"><span>Deskly, Kemist, FHIRSignal, BioSignalFlow, CarePass</span></div>
-  <img src="assets/projects/product-ux.jpg" alt="Mobile perpetual trading interface" width="512" height="288" loading="lazy" decoding="async" onerror="this.remove()">
-</figure></div>
-    <div class="case-body">
-      <div class="cs-lead"><p>Across four additional UX engagements, I explored how interface decisions influence user confidence, decision-making, and task completion. For wallet connection, I treated wallet selection as a decision point rather than a technical setup step, using clearer grouping, hierarchy, and language to reduce uncertainty for users unfamiliar with Web3. For username-first onboarding, I explored separating initial product access from cryptographic commitment, allowing users to enter with a username and encounter wallet creation later when ownership becomes relevant. For a unified swap flow, I reduced multiple preliminary decisions into a single input, combined token and network selection, and surfaced validation earlier, making the interaction more direct without changing the underlying smart contract behaviour. For perpetual trading, I focused on controlling cognitive load during active execution: making the order book collapsible, simplifying market switching, adapting the trading experience to mobile, and keeping open-position management accessible. Across all four, the common product principle was that complexity should not automatically become the user's responsibility. Good UX is not about removing functionality; it is about making the right functionality accessible at the right moment.</p><ul class="sublist"><li><b><a class="link" href="https://vandorprep.vercel.app/" target="_blank" rel="noopener noreferrer">Perps Trading</a></b><span>Controlling cognitive load during active execution.</span></li><li><b><a class="link" href="https://clove-lemon.vercel.app/" target="_blank" rel="noopener noreferrer">Unified Swap Flow</a></b><span>Multiple preliminary decisions reduced to a single input.</span></li><li><b>Wallet Connection Modal</b><span>Link coming soon.</span></li><li><b><a class="link" href="https://zyrick.framer.website/works/onboarding" target="_blank" rel="noopener noreferrer">Username-First Onboarding</a></b><span>Product access separated from cryptographic commitment.</span></li></ul></div>
-      <div class="cs-sec"><div class="k"><h3>Healthcare and payments</h3></div><div class="v"><ul class="sublist"><li><b><a class="link" href="https://desklyhq.vercel.app/" target="_blank" rel="noopener noreferrer">Deskly</a></b><span>Clinic operations: booking, intake, day view and payments.</span></li><li><b><a class="link" href="https://kemistapp.vercel.app/" target="_blank" rel="noopener noreferrer">Kemist</a></b><span>Pharmacy stock visibility and reservation/hold workflows.</span></li><li><b><a class="link" href="https://fhirsignal.vercel.app/" target="_blank" rel="noopener noreferrer">FHIRSignal</a></b><span>Clinical interoperability and patient record systems.</span></li><li><b><a class="link" href="https://biosignalflow.vercel.app/" target="_blank" rel="noopener noreferrer">BioSignalFlow</a></b><span>Real-time patient telemetry and health data visualization.</span></li><li><b>CarePass</b><span>Healthcare payments. Built for the Stellar Hackathon.</span></li></ul></div></div>
+<article id="dicom-planner" class="proj" aria-labelledby="dicom-planner-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/dicom.png" alt="Web DICOM Surgical Planner interface with tools, series list, a viewport waiting for a scan, and metadata and measurements panels" width="1313" height="694" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Product, Frontend, Simulated data</span><h3 id="dicom-planner-h">Web DICOM Surgical Planner</h3><p class="proj-sub">Measurements clinicians can trust, in the browser</p>
+      <p class="proj-lead">Clinicians planning from a scan need measurements they can trust without installing another viewer. I built a browser based planner that parses .dcm files on the client, calibrates to millimeters first, and adjusts windowing in real time.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>93</b><span>Performance</span></div><div class="metric"><b>91</b><span>Accessibility</span></div><div class="metric"><b>100</b><span>Best practices</span></div></div><div class="tech"><span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Cornerstone.js</span><span>dicom-parser</span></div></div>
+      
     </div>
   </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="Web DICOM Surgical Planner system breakdown"><div class="bk"><h4>Architecture</h4><p>Next.js 15 (App Router) with React 19 and TypeScript. Cornerstone.js renders the images, and DICOM files are parsed on the client with dicom-parser plus a lightweight header parser.</p></div><div class="bk"><h4>UI solution</h4><p>The planner calibrates to millimetres first and adjusts windowing in real time, so a measurement is readable before it is used.</p></div><div class="bk"><h4>Measured</h4><p>Lighthouse: performance 93, accessibility 91, best practices 100, SEO 90. First paint 1.2 s and largest content 1.2 s.</p></div></div></details>
 </article>
+<article id="carepass" class="proj" aria-labelledby="carepass-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/carepass.png" alt="CarePass landing page: Send care, not cash, with a care credit card that only works at verified providers" width="933" height="478" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">FinTech, Healthcare, Stellar Hackathon</span><h3 id="carepass-h">CarePass</h3><p class="proj-sub">Send care, not cash</p>
+      <p class="proj-lead">A healthcare payment product combining controlled spending, verified providers and payment infrastructure. Someone abroad pays for a parent's treatment in Nigeria without wondering where the money went: the family gets a pass that only works at verified hospitals, labs and pharmacies, within limits the sender sets, with a receipt for every payment.</p>
+      <div class="proj-side"><div class="tech"><span>Stellar</span><span>Verified providers</span><span>Spending limits</span><span>Receipts</span></div></div>
+      
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><p class="more-lead">Being built for the Stellar Hackathon.</p><div class="breakdown" role="group" aria-label="CarePass system breakdown"><div class="bk"><h4>Architecture</h4><p>A care credit pass backed by payment infrastructure, restricted to verified hospitals, labs and pharmacies.</p></div><div class="bk"><h4>UI solution</h4><p>The card shows available care credit. A receipt strip shows a clinic payment as paid and a payment to a personal account as not allowed.</p></div><div class="bk"><h4>Principle</h4><p>Send care, not cash.</p></div></div></details>
+</article>
+
+  </div>
+</section>
+<section id="fintech" class="cat" aria-labelledby="fintech-h">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="l"><span class="cat-num">02</span><h2 id="fintech-h">FinTech</h2><p class="cat-model">Transaction-centric design</p><p class="cat-intro">Product UX for trading and swapping.</p></div>
+      <div class="r"><span class="label">Optimize for</span><p class="cat-rule">Transaction reliability, financial security, transparency and efficient financial operations.</p></div>
+    </div>
+    <article id="perps" class="proj" aria-labelledby="perps-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/product-ux.jpg" alt="Mobile perpetual trading interface" width="512" height="288" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">FinTech, Web3, Product UX</span><h3 id="perps-h">Perps Trading</h3><p class="proj-sub">Controlling cognitive load during active execution</p>
+      <p class="proj-lead">For perpetual trading, I focused on controlling cognitive load during active execution: making the order book collapsible, simplifying market switching, adapting the trading experience to mobile, and keeping open-position management accessible.</p>
+      <div class="proj-side"><div class="tech"><span>Order book</span><span>Market switching</span><span>Mobile trading</span><span>Open positions</span></div></div>
+      <a class="btn btn-primary" href="https://vandorprep.vercel.app/" target="_blank" rel="noopener noreferrer">View project <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="Perps Trading system breakdown"><div class="bk"><h4>UX decisions</h4><p>Collapsible order book, simpler market switching, a mobile-adapted trading screen and open positions that stay within reach.</p></div><div class="bk"><h4>Principle</h4><p>Complexity should not automatically become the user's responsibility.</p></div></div></details>
+</article>
+<article id="swap" class="proj" aria-labelledby="swap-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/swap.jpg" alt="Unified swap flow on mobile: a single sell and receive screen with SOL and ETH, and a token selection sheet with search" width="2000" height="1125" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">FinTech, Web3, Product UX</span><h3 id="swap-h">Unified Swap Flow</h3><p class="proj-sub">Multiple preliminary decisions reduced to a single input</p>
+      <p class="proj-lead">For a unified swap flow, I reduced multiple preliminary decisions into a single input, combined token and network selection, and surfaced validation earlier, making the interaction more direct without changing the underlying smart contract behaviour.</p>
+      <div class="proj-side"><div class="tech"><span>Single input</span><span>Token + network</span><span>Early validation</span></div></div>
+      <a class="btn btn-primary" href="https://clove-lemon.vercel.app/" target="_blank" rel="noopener noreferrer">View project <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="Unified Swap Flow system breakdown"><div class="bk"><h4>Architecture</h4><p>The underlying smart contract behaviour is unchanged. The work is in the interaction layer.</p></div><div class="bk"><h4>UX decisions</h4><p>One input replaces several preliminary choices, token and network are chosen together, and validation appears before the user commits.</p></div><div class="bk"><h4>Principle</h4><p>Make the right functionality accessible at the right moment.</p></div></div></details>
+</article>
+<article id="fintech-carepass" class="proj proj-cross" aria-label="CarePass also appears under Healthtech">
+  <p>CarePass, a healthcare payments product built for the Stellar Hackathon, applies the same transaction principles. <a class="link" href="#carepass">Read it under Healthtech</a>.</p>
+</article>
+
+  </div>
+</section>
+<section id="web3" class="cat" aria-labelledby="web3-h">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="l"><span class="cat-num">03</span><h2 id="web3-h">Blockchain &amp; Web3</h2><p class="cat-model">Trust-centric design</p><p class="cat-intro">Product UX for wallet and identity flows.</p></div>
+      <div class="r"><span class="label">Optimize for</span><p class="cat-rule">Wallet abstraction, deterministic state clarity, gas efficiency, and verifiable on-chain transparency.</p></div>
+    </div>
+    <article id="wallet-modal" class="proj" aria-labelledby="wallet-modal-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/wallet-connection.jpg" alt="Connect wallet user flow across three phone screens: choose a wallet, extension not found, and connecting to Ready" width="2000" height="1125" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Blockchain, Web3, Product UX</span><h3 id="wallet-modal-h">Wallet Connection Modal</h3><p class="proj-sub">Wallet selection treated as a decision point</p>
+      <p class="proj-lead">For wallet connection, I treated wallet selection as a decision point rather than a technical setup step, using clearer grouping, hierarchy, and language to reduce uncertainty for users unfamiliar with Web3.</p>
+      <div class="proj-side"><div class="tech"><span>Wallet abstraction</span><span>Information hierarchy</span><span>Plain language</span></div></div>
+      
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="Wallet Connection Modal system breakdown"><div class="bk"><h4>UX decisions</h4><p>Group the choices, order them by importance and describe them in plain terms so an unfamiliar user is never guessing.</p></div><div class="bk"><h4>Principle</h4><p>Complexity should not automatically become the user's responsibility.</p></div><div class="bk"><h4>Related</h4><p>The same thinking shaped when the wallet prompt appears in STARK and CIPHER.</p></div></div></details>
+</article>
+<article id="username-onboarding" class="proj" aria-labelledby="username-onboarding-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot pshot-phone"><img src="assets/projects/username-onboarding.jpg" alt="Wallet home screen shown after username-first onboarding, with a recovery phrase prompt, balance and send, receive and swap actions" width="591" height="1280" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Blockchain, Web3, Product UX</span><h3 id="username-onboarding-h">Username-First Onboarding</h3><p class="proj-sub">Product access separated from cryptographic commitment</p>
+      <p class="proj-lead">For username-first onboarding, I explored separating initial product access from cryptographic commitment, allowing users to enter with a username and encounter wallet creation later when ownership becomes relevant.</p>
+      <div class="proj-side"><div class="tech"><span>Progressive onboarding</span><span>Wallet abstraction</span><span>Deferred commitment</span></div></div>
+      <a class="btn btn-primary" href="https://zyrick.framer.website/works/onboarding" target="_blank" rel="noopener noreferrer">View project <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><div class="breakdown" role="group" aria-label="Username-First Onboarding system breakdown"><div class="bk"><h4>Architecture</h4><p>Entry is a username. Wallet creation is a later step, introduced at the moment ownership matters.</p></div><div class="bk"><h4>UX decisions</h4><p>Let people start before asking them to commit to anything cryptographic.</p></div><div class="bk"><h4>Principle</h4><p>Good UX is not about removing functionality; it is about making the right functionality accessible at the right moment.</p></div></div></details>
+</article>
+
+  </div>
+</section>
+<section id="gaming" class="cat" aria-labelledby="gaming-h">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="l"><span class="cat-num">04</span><h2 id="gaming-h">Gaming</h2><p class="cat-model">Experience-centric design</p><p class="cat-intro">Stark, Cipher and ZAP FC. What they taught me about onboarding and retention carries to any product.</p></div>
+      <div class="r"><span class="label">Optimize for</span><p class="cat-rule">Core loop retention, low-latency responsiveness, player immersion, and rewarding progression systems.</p></div>
+    </div>
+    <article id="zap-fc" class="proj" aria-labelledby="zap-fc-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/zap-fc.jpg" alt="ZAP FC clubhouse screen with practice ladder and live match" width="1100" height="672" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Gaming, Blockchain, Game experiment</span><h3 id="zap-fc-h">ZAP FC</h3><p class="proj-sub">Designing strategy around human psychology</p>
+      <p class="proj-lead">ZAP FC is a fully onchain football strategy game built on Starknet, designed around psychological prediction rather than conventional football mechanics. Instead of dribbling, aiming, or mastering timing, two players simultaneously commit to hidden decisions, attempting to anticipate each other's next move.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>50+</b><span>Players across 9 countries</span></div></div><div class="tech"><span>Starknet</span><span>Commit-reveal</span><span>Two-player</span></div></div>
+      <a class="btn btn-primary" href="https://playzap.vercel.app/" target="_blank" rel="noopener noreferrer">Play ZAP FC <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><p class="more-lead">From a product perspective, the interesting challenge is making a mind game feel like football while keeping its underlying rules understandable. The UX revolves around communicating intent, uncertainty, and consequences clearly, ensuring players understand what they're deciding and why the outcome occurred. The commit-reveal architecture also introduces a trust requirement: neither player should be able to see or manipulate the other's decision before both have committed. Every interaction and presentation decision should reinforce the central mechanic: you're not playing the pitch; you're playing the person reading it.</p><div class="breakdown" role="group" aria-label="ZAP FC system breakdown"><div class="bk"><h4>Context</h4><p>Exploring how football can become an enjoyable onchain game.</p></div><div class="bk"><h4>Architecture</h4><p>A two-player strategy game built around hidden decisions, simultaneous commitment and outcome resolution.</p></div><div class="bk"><h4>UX decisions</h4><p>Football provides the familiar visual language, while the underlying experience is a mind game.</p><p>Players should understand their choices without needing to understand complicated blockchain mechanics.</p></div><div class="bk"><h4>Result</h4><p>Moving wallet connection to after play showed the same pattern in ZAP FC. Many players also played without realising it was an onchain game, which was the goal: keep the architecture out of the player's way.</p></div><div class="bk"><h4>Principle</h4><p>A mind game wearing football's clothes.</p></div></div></details>
+</article>
+<article id="cipher" class="proj" aria-labelledby="cipher-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/cipher.jpg" alt="Cipher main menu with resume, create a room and join a room" width="1100" height="582" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Blockchain, Gaming, Dojo Game Jam winner</span><h3 id="cipher-h">CIPHER</h3><p class="proj-sub">Understanding the cost of introducing infrastructure too early</p>
+      <p class="proj-lead">Cipher exposed an important onboarding problem in Web3 gaming: asking players to connect a Cartridge wallet before experiencing the game. During testing, a player encountered the wallet requirement and chose not to proceed, illustrating how technical infrastructure can become a barrier before users understand the product's value.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>1,000+</b><span>Players on a hackathon game</span></div></div><div class="tech"><span>Cartridge wallet</span><span>Rooms</span><span>Dojo Game Jam</span></div></div>
+      <a class="btn btn-primary" href="https://playcipher.vercel.app/" target="_blank" rel="noopener noreferrer">Play Cipher <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><p class="more-lead">The problem wasn't necessarily wallet complexity itself, but its position in the user journey. This informed a broader product principle: players should have a reason to care about the game before being asked to care about its underlying infrastructure. Rather than treating wallet connection as a mandatory entry requirement, I began examining how ownership, authentication, and blockchain interactions could be introduced progressively, at moments when they made sense to the player's intent.</p><div class="breakdown" role="group" aria-label="CIPHER system breakdown"><div class="bk"><h4>Architecture</h4><p>A game experience integrated with Cartridge wallet infrastructure.</p></div><div class="bk"><h4>UX decisions</h4><p>Wallet connection and entry flows are important parts of the overall product experience.</p><p>Requiring a wallet connection before gameplay adds friction before users experience the value.</p></div><div class="bk"><h4>Principle</h4><p>Infrastructure should support the experience, not become the experience.</p></div></div></details>
+</article>
+<article id="stark" class="proj" aria-labelledby="stark-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/stark.jpg" alt="Stark column puzzle game board" width="1100" height="733" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Gaming, Blockchain, Game experiment</span><h3 id="stark-h">STARK</h3><p class="proj-sub">Designing the experience before introducing the technology</p>
+      <p class="proj-lead">STARK became an opportunity to explore the opposite onboarding approach. The game uses a column-based puzzle mechanic, with the tagline "Fill the column." The product experience was designed to let players access the first two levels without authentication, allowing them to understand the gameplay before being asked to create an account.</p>
+      <div class="proj-side"><div class="metrics"><div class="metric"><b>+60%</b><span>More plays after moving wallet connection to after the first game</span></div></div><div class="tech"><span>Progressive disclosure</span><span>Offchain + onchain</span><span>Social auth first</span></div></div>
+      <a class="btn btn-primary" href="https://playstark.vercel.app/" target="_blank" rel="noopener noreferrer">Play Stark <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><p class="more-lead">Login becomes relevant when players want to save progress, while social authentication is prioritized before wallet connection. This was a deliberate application of progressive disclosure: separating the immediate goal of playing from the later need for persistence and blockchain participation. Other decisions, including the Hold/Swap interaction and the separation of Offchain and Onchain experiences, were intended to make the game accessible without removing its Web3 capabilities. Early testing reinforced the reasoning: players engaged with the game, replayed levels, chased scores, and shared screenshots without needing an explanation of the underlying technology.</p><div class="breakdown" role="group" aria-label="STARK system breakdown"><div class="bk"><h4>Context</h4><p>Exploring how blockchain can exist underneath a game without getting in the player's way.</p></div><div class="bk"><h4>Architecture</h4><p>A level-based column-merging puzzle with gameplay progression and optional onchain interaction.</p></div><div class="bk"><h4>UX decisions</h4><p>Dark, focused interface with minimal distractions and clear gameplay controls.</p><p>Levels 1 and 2 are playable before login, and login enables saving progress.</p></div><div class="bk"><h4>Result</h4><p>Moving wallet connection from before play to after play lifted plays by about 60%. Many players had been dropping at the first prompt to connect a wallet.</p></div><div class="bk"><h4>Principle</h4><p>Gameplay first, infrastructure second.</p></div></div></details>
+</article>
+
+  </div>
+</section>
+<section id="digital-product" class="cat" aria-labelledby="digital-product-h">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="l"><span class="cat-num">05</span><h2 id="digital-product-h">Digital product</h2><p class="cat-model">Project-centred design</p></div>
+      <div class="r"><span class="label">Optimize for</span><p class="cat-rule">The project, not the post, as the primary object.</p></div>
+    </div>
+    <article id="wippo" class="proj" aria-labelledby="wippo-h">
+  <div class="proj-grid2">
+    <div class="proj-media"><figure class="pshot"><img src="assets/projects/wippo.jpg" alt="Wippo project page showing the Stark project journey" width="1100" height="604" loading="lazy" decoding="async"></figure></div>
+    <div class="proj-text">
+      <span class="tags">Digital product, Platform</span><h3 id="wippo-h">Wippo</h3><p class="proj-sub">Making the project, rather than the post, the centre of the experience</p>
+      <p class="proj-lead">Wippo is a platform built around a different product question: what if everything people make had a living home instead of being scattered across social platforms? Its central design decision is treating the project as the primary object, rather than treating individual posts as the product.</p>
+      <div class="proj-side"><div class="tech"><span>Project-first</span><span>Editorial</span><span>Information architecture</span></div></div>
+      <a class="btn btn-primary" href="https://wippo.com/" target="_blank" rel="noopener noreferrer">Visit Wippo <span class="arr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+  <details class="proj-more"><summary>System breakdown</summary><p class="more-lead">Each project has a current state, while updates, videos, images, live sessions, and other contributions become part of its evolving history. This changes the information architecture from a conventional social feed into a project-centred experience. Visitors can understand what someone is making, see its latest development, and explore how it has evolved over time. The reasoning also challenges the pressure to showcase only finished work: unfinished ideas, experiments, setbacks, and progress are all meaningful parts of a project's journey. The goal is to make documenting the process as natural as sharing the outcome, while giving creators a persistent identity for the things they make.</p><div class="breakdown" role="group" aria-label="Wippo system breakdown"><div class="bk"><h4>Context</h4><p>Exploring how people can share, document, and connect through the things they make.</p></div><div class="bk"><h4>Architecture</h4><p>The project is the primary entity. Updates, media, milestones and discussions belong to a project instead of existing as disconnected posts.</p></div><div class="bk"><h4>UX decisions</h4><p>Editorial, minimal and project-focused. The latest state of a project takes visual priority.</p><p>Make it easy to follow something being created over time, rather than consume another social feed.</p></div><div class="bk"><h4>Principle</h4><p>The project is the home; everything created or shared becomes part of its journey.</p></div></div></details>
+</article>
+
+  </div>
+</section>
+</div>
 </main>
 <section id="contact" class="contact dark" aria-labelledby="contact-h">
   <div class="wrap">
     <span class="eyebrow">Contact</span>
-    <h2 id="contact-h">Have a problem worth <span class="accent-em">building</span> a product around?</h2>
-    <p class="lede">Open to product engineering opportunities, collaborations and interesting problems.</p>
+    <h2 id="contact-h">Have a product to <span class="accent-em">ship</span>?</h2>
+    <p class="lede">Tell me what you are building. I will tell you how I would scope it, and how fast it can be live.</p>
     <div class="contact-links">
       <a href="mailto:justzyrick@gmail.com">Email</a>
       <a href="https://github.com/0xZyrick" target="_blank" rel="noopener noreferrer">GitHub</a>
