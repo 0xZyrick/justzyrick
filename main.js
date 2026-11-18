@@ -167,3 +167,28 @@
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
   update();
 })();
+
+// problem stage: stacked cards that follow the selected problem
+(() => {
+  const root = document.querySelector('[data-prob]');
+  if (!root) return;
+  const items = [...root.querySelectorAll('.prob-item')];
+  const cards = [...root.querySelectorAll('.pcard')];
+  const fix = root.querySelector('.prob-fix p');
+  const n = items.length;
+  let cur = 0, timer = null;
+  const set = (i) => {
+    cur = i;
+    items.forEach((b, k) => { b.classList.toggle('is-on', k === i); b.setAttribute('aria-pressed', String(k === i)); });
+    cards.forEach((c, k) => { c.dataset.pos = String((k - i + n) % n); });
+    fix.textContent = items[i].dataset.fix;
+  };
+  const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+  items.forEach((b, k) => {
+    b.addEventListener('click', () => { stop(); set(k); });
+    b.addEventListener('mouseenter', () => { stop(); set(k); });
+    b.addEventListener('focus', () => { stop(); set(k); });
+  });
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => set((cur + 1) % n), 4500);
+  set(0);
+})();
